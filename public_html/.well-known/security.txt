@@ -1,0 +1,4 @@
+# Cómo avisarnos si encuentras un fallo de seguridad
+Contact: mailto:zyradigitalpersonal@gmail.com
+Preferred-Languages: es, en
+Expires: 2027-09-11T00:00:00.000Z

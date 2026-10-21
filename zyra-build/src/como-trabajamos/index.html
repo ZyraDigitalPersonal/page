@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t228">Cómo trabajamos — ZYRA</title>
+<meta name="description" content="Servicio por servicio: qué hacemos, con qué tecnología, cuánto tarda y por qué trabajamos así.">
+<meta name="theme-color" content="#07090D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cómo trabajamos — ZYRA">
+<meta property="og:description" content="Servicio por servicio: qué hacemos, con qué tecnología, cuánto tarda y por qué trabajamos así.">
+<meta property="og:image" content="../assets/img/og-zyra.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/zyra.css?v=27">
+<link rel="stylesheet" href="../assets/css/resenas.css?v=1">
+<script src="../assets/js/boot.js?v=27"></script>
+</head>
+<body data-page="como-trabajamos/">
+<noscript><link rel="stylesheet" href="../assets/css/nojs.css?v=27"></noscript>
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__mark"><img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="120" height="113"><span class="curtain__word">ZYRA</span></div>
+</div>
+<canvas class="spark" id="spark" aria-hidden="true"></canvas>
+<a class="skip" href="#main" data-i18n="t229">Saltar al contenido</a>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="../index.html" aria-label="ZYRA">
+    <img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="34" height="32"><span>ZYRA</span>
+  </a>
+  <div class="nav__actions">
+    <button class="icon-btn icon-btn--theme" id="themeBtn" type="button" title="Cambiar tema" aria-label="Cambiar tema"><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--sun"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--moon"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg></button>
+    <div class="lang" id="lang">
+      <button class="icon-btn icon-btn--lang" id="langBtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Cambiar idioma">
+        <span id="langLabel">ES</span><i class="lang__chev" aria-hidden="true"></i>
+      </button>
+      <div class="lang__drop" id="langDrop" hidden>
+        <button type="button" data-lang="es" class="is-on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" title="Menú" aria-label="Menú">
+      <span class="burger__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu__bg" aria-hidden="true"></div>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Menú completo">
+      <a class="menu__item" href="../index.html"><span class="mlabel" data-i18n="t234">Inicio</span></a>
+      <div class="menu__group">
+        <button class="menu__item menu__toggle" type="button" id="svcToggle" aria-expanded="false" aria-controls="svcDrop">
+          <span class="mlabel" data-i18n="t235">Servicios</span>
+          <i class="menu__chev" aria-hidden="true"></i>
+        </button>
+        <div class="menu__drop" id="svcDrop" hidden>
+          <a href="../servicios/desarrollo-web/index.html" data-i18n="t230">Desarrollo web</a><a href="../servicios/software-a-medida/index.html" data-i18n="t231">Software a medida</a><a href="../servicios/automatizacion/index.html" data-i18n="t232">Automatización</a><a href="../servicios/agentes-de-ia/index.html" data-i18n="t233">Agentes de IA</a>
+          <a class="menu__all" href="../servicios/index.html" data-i18n="t236">Ver todos los servicios</a>
+        </div>
+      </div>
+      <a class="menu__item" href="../como-trabajamos/index.html"><span class="mlabel" data-i18n="t237">Cómo trabajamos</span></a>
+      <a class="menu__item" href="../sobre-nosotros/index.html"><span class="mlabel" data-i18n="t238">Sobre nosotros</span></a>
+      <a class="menu__item" href="../contacto/index.html"><span class="mlabel" data-i18n="t239">Contacto</span></a>
+    </nav>
+    <div class="menu__side">
+      <figure class="menu__media" data-menu-media>
+        <img decoding="async" src="../assets/img/zyra-banner.webp" alt="" width="1400" height="730" loading="lazy">
+      </figure>
+      <div class="menu__meta">
+        <p class="menu__claim" data-i18n="t240">Tecnología sin humo.<br>Soluciones que funcionan.</p>
+        <ul class="menu__contact">
+          <li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+          <li><a href="https://wa.me/34643412454" data-i18n="t241">WhatsApp directo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<main id="main">
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <nav class="crumb" aria-label="Ruta"><a href="../index.html" data-i18n="t290">Inicio</a><i aria-hidden="true">/</i><span data-i18n="t291">Cómo trabajamos</span></nav>
+  <p class="kicker" data-i18n="t292">Cómo trabajamos</p>
+  <h1 class="phero__title h-display" data-i18n="t293">Un proceso claro,<br>de principio a fin.</h1>
+  <p class="phero__lead" data-i18n="t294">Servicio por servicio: qué hacemos, con qué lo construimos, cuánto suele tardar y por qué lo hacemos así.</p>
+</section>
+<section class="process">
+  <div class="process__sticky">
+    <header class="shead"><p class="kicker" data-i18n="t295">El camino</p><h2 class="h-section" data-i18n="t296">Cuatro pasos, siempre los mismos.</h2></header>
+    <p class="process__note" data-i18n="t297">Cambia la tecnología según el proyecto, no la forma de trabajar ni de comunicarnos contigo.</p>
+  </div>
+  <ol class="steps"><li class="step"><span class="step__n mono">01</span><h3 data-i18n="t298">Cuéntanos</h3><p data-i18n="t299">Una conversación para entender el problema real: qué falla hoy, qué se repite y qué esperas que cambie.</p></li><li class="step"><span class="step__n mono">02</span><h3 data-i18n="t300">Analizamos</h3><p data-i18n="t301">Definimos alcance, tecnología y tiempos, y te lo contamos antes de que empiece nada.</p></li><li class="step"><span class="step__n mono">03</span><h3 data-i18n="t302">Diseñamos y desarrollamos</h3><p data-i18n="t303">Construimos y probamos por fases, enseñando avances para que no haya sorpresas al final.</p></li><li class="step"><span class="step__n mono">04</span><h3 data-i18n="t304">Lanzamos y mejoramos</h3><p data-i18n="t305">Se publica, se mide con uso real y se ajusta. El proyecto sigue vivo después de la entrega.</p></li><li class="steps__line" aria-hidden="true"><i></i></li></ol>
+</section>
+<section class="wrap">
+  <header class="shead"><p class="kicker" data-i18n="t306">Servicio por servicio</p><h2 class="h-section" data-i18n="t307">Lo que hay detrás de cada uno.</h2></header>
+  <div class="hows"><article class="how">
+  <span class="card__n mono">01</span>
+  <div class="how__body">
+    <h3 data-i18n="t247">Desarrollo web</h3>
+    <p class="lead" data-i18n="t248">Webs que representan bien al negocio.</p>
+    <ul class="ticks"><li data-i18n="t242">Diseño a medida, sin plantillas cerradas</li><li data-i18n="t243">Rendimiento y SEO básico</li><li data-i18n="t244">Responsive real en móvil y tablet</li><li data-i18n="t245">Formulario de contacto, SSL y dominio</li><li data-i18n="t246">Una ronda de revisiones incluida</li></ul>
+    <dl class="how__data">
+      <div><dt data-i18n="t249">Herramientas</dt><dd data-i18n="t250">Figma, HTML/CSS/JS y React o Next.js cuando el proyecto lo pide. Hosting según el caso.</dd></div>
+      <div><dt data-i18n="t251">Plazo</dt><dd data-i18n="t252">1–2 semanas la web esencial · 3–5 semanas la avanzada</dd></div>
+    </dl>
+    <a class="alink" href="../servicios/desarrollo-web/index.html" data-i18n="t253">Saber más</a>
+  </div>
+</article><article class="how">
+  <span class="card__n mono">02</span>
+  <div class="how__body">
+    <h3 data-i18n="t259">Software a medida</h3>
+    <p class="lead" data-i18n="t260">Pensado para cómo trabaja cada negocio.</p>
+    <ul class="ticks"><li data-i18n="t254">Análisis del proceso actual</li><li data-i18n="t255">Diseño de la aplicación contigo</li><li data-i18n="t256">Desarrollo ampliable por fases</li><li data-i18n="t257">Pruebas con datos reales</li><li data-i18n="t258">Documentación y soporte inicial</li></ul>
+    <dl class="how__data">
+      <div><dt data-i18n="t261">Herramientas</dt><dd data-i18n="t262">Node.js, PHP, Python, MySQL o PostgreSQL y frontend a medida.</dd></div>
+      <div><dt data-i18n="t263">Plazo</dt><dd data-i18n="t264">Desde 4 semanas, según alcance</dd></div>
+    </dl>
+    <a class="alink" href="../servicios/software-a-medida/index.html" data-i18n="t265">Saber más</a>
+  </div>
+</article><article class="how">
+  <span class="card__n mono">03</span>
+  <div class="how__body">
+    <h3 data-i18n="t271">Automatización</h3>
+    <p class="lead" data-i18n="t272">Menos tareas repetitivas, más tiempo para el negocio.</p>
+    <ul class="ticks"><li data-i18n="t266">Mapeo de las tareas que se repiten</li><li data-i18n="t267">Conexión entre las herramientas que ya usas</li><li data-i18n="t268">Flujos automáticos con avisos</li><li data-i18n="t269">Pruebas reales antes de activar</li><li data-i18n="t270">Documentación y ajustes iniciales</li></ul>
+    <dl class="how__data">
+      <div><dt data-i18n="t273">Herramientas</dt><dd data-i18n="t274">Make, Zapier, n8n, APIs, email, Slack y WhatsApp.</dd></div>
+      <div><dt data-i18n="t275">Plazo</dt><dd data-i18n="t276">1–3 semanas</dd></div>
+    </dl>
+    <a class="alink" href="../servicios/automatizacion/index.html" data-i18n="t277">Saber más</a>
+  </div>
+</article><article class="how">
+  <span class="card__n mono">04</span>
+  <div class="how__body">
+    <h3 data-i18n="t283">Agentes de IA</h3>
+    <p class="lead" data-i18n="t284">Un agente que atiende mientras el equipo se ocupa del resto.</p>
+    <ul class="ticks"><li data-i18n="t278">Casos de uso definidos contigo</li><li data-i18n="t279">Entrenamiento con tu información real</li><li data-i18n="t280">Integración en web y WhatsApp</li><li data-i18n="t281">Reglas de derivación a una persona</li><li data-i18n="t282">Pruebas con preguntas reales</li></ul>
+    <dl class="how__data">
+      <div><dt data-i18n="t285">Herramientas</dt><dd data-i18n="t286">Modelos de OpenAI, Anthropic u otros, web y WhatsApp Business.</dd></div>
+      <div><dt data-i18n="t287">Plazo</dt><dd data-i18n="t288">2–4 semanas</dd></div>
+    </dl>
+    <a class="alink" href="../servicios/agentes-de-ia/index.html" data-i18n="t289">Saber más</a>
+  </div>
+</article></div>
+</section>
+<section class="band">
+  <div class="band__glow" aria-hidden="true"></div>
+  <h2 class="h-display" data-i18n="t308">¿Lo vemos<br>con tu caso?</h2>
+  <p data-i18n="t309">Media hora de conversación suele bastar para saber si tiene sentido y por dónde empezar.</p>
+  <div class="band__cta">
+    <a class="btn btn--light" href="../contacto/index.html" data-magnet data-i18n="t310">Cuéntanos tu proyecto</a>
+    <a class="btn btn--ghost" href="https://wa.me/34643412454" data-magnet data-i18n="t311">WhatsApp directo</a>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a class="footer__mark" href="../index.html" aria-label="ZYRA">
+        <img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="36" height="34"><span>ZYRA</span>
+      </a>
+      <p data-i18n="t321">Diseñamos webs, desarrollamos software y creamos soluciones de automatización e IA para empresas que quieren crecer.</p>
+    </div>
+    <nav class="footer__links" aria-label="Enlaces"><a href="../servicios/desarrollo-web/index.html" data-i18n="t312">Desarrollo web</a><a href="../servicios/automatizacion/index.html" data-i18n="t313">Automatización</a><a href="../servicios/agentes-de-ia/index.html" data-i18n="t314">Agentes de IA</a><a href="../sobre-nosotros/index.html" data-i18n="t315">Sobre nosotros</a><a href="../servicios/index.html" data-i18n="t316">Servicios</a><a href="../contacto/index.html" data-i18n="t317">Contacto</a></nav>
+    <div class="footer__social">
+      <p class="footer__label" data-i18n="t322">Redes sociales</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3.5v10.9a3.6 3.6 0 1 1-3.1-3.57"/><path d="M14.4 3.5c.5 2.4 2 3.9 4.5 4.2"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5.4" width="18.8" height="13.2" rx="4.2"/><path d="M10.4 9.5l4.6 2.5-4.6 2.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__legal"><a href="../legal/aviso-legal/index.html" data-i18n="t318">Aviso legal</a><a href="../legal/privacidad/index.html" data-i18n="t319">Privacidad</a><a href="../legal/cookies/index.html" data-i18n="t320">Cookies</a></span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/cookies.js?v=27"></script>
+<script src="../assets/js/i18n.js?v=27"></script>
+<script src="../assets/js/zyra.js?v=27"></script>
+<script src="../assets/js/resenas.js?v=27"></script>
+</body>
+</html>

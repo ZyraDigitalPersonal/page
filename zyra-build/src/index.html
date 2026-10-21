@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t1">ZYRA — Transformamos negocios con tecnología</title>
+<meta name="description" content="Agencia tecnológica: desarrollo web, software a medida, automatización e inteligencia artificial para empresas que quieren crecer.">
+<meta name="theme-color" content="#07090D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZYRA — Transformamos negocios con tecnología">
+<meta property="og:description" content="Agencia tecnológica: desarrollo web, software a medida, automatización e inteligencia artificial para empresas que quieren crecer.">
+<meta property="og:image" content="assets/img/og-zyra.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/zyra.css?v=27">
+<link rel="stylesheet" href="assets/css/resenas.css?v=1">
+<script src="assets/js/boot.js?v=27"></script>
+</head>
+<body data-page="home">
+<noscript><link rel="stylesheet" href="assets/css/nojs.css?v=27"></noscript>
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__mark"><img decoding="async" src="assets/img/zyra-simbolo.webp" alt="" width="120" height="113"><span class="curtain__word">ZYRA</span></div>
+</div>
+<canvas class="spark" id="spark" aria-hidden="true"></canvas>
+<a class="skip" href="#main" data-i18n="t2">Saltar al contenido</a>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="ZYRA">
+    <img decoding="async" src="assets/img/zyra-simbolo.webp" alt="" width="34" height="32"><span>ZYRA</span>
+  </a>
+  <div class="nav__actions">
+    <button class="icon-btn icon-btn--theme" id="themeBtn" type="button" title="Cambiar tema" aria-label="Cambiar tema"><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--sun"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--moon"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg></button>
+    <div class="lang" id="lang">
+      <button class="icon-btn icon-btn--lang" id="langBtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Cambiar idioma">
+        <span id="langLabel">ES</span><i class="lang__chev" aria-hidden="true"></i>
+      </button>
+      <div class="lang__drop" id="langDrop" hidden>
+        <button type="button" data-lang="es" class="is-on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" title="Menú" aria-label="Menú">
+      <span class="burger__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu__bg" aria-hidden="true"></div>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Menú completo">
+      <a class="menu__item" href="index.html"><span class="mlabel" data-i18n="t7">Inicio</span></a>
+      <div class="menu__group">
+        <button class="menu__item menu__toggle" type="button" id="svcToggle" aria-expanded="false" aria-controls="svcDrop">
+          <span class="mlabel" data-i18n="t8">Servicios</span>
+          <i class="menu__chev" aria-hidden="true"></i>
+        </button>
+        <div class="menu__drop" id="svcDrop" hidden>
+          <a href="servicios/desarrollo-web/index.html" data-i18n="t3">Desarrollo web</a><a href="servicios/software-a-medida/index.html" data-i18n="t4">Software a medida</a><a href="servicios/automatizacion/index.html" data-i18n="t5">Automatización</a><a href="servicios/agentes-de-ia/index.html" data-i18n="t6">Agentes de IA</a>
+          <a class="menu__all" href="servicios/index.html" data-i18n="t9">Ver todos los servicios</a>
+        </div>
+      </div>
+      <a class="menu__item" href="como-trabajamos/index.html"><span class="mlabel" data-i18n="t10">Cómo trabajamos</span></a>
+      <a class="menu__item" href="sobre-nosotros/index.html"><span class="mlabel" data-i18n="t11">Sobre nosotros</span></a>
+      <a class="menu__item" href="contacto/index.html"><span class="mlabel" data-i18n="t12">Contacto</span></a>
+    </nav>
+    <div class="menu__side">
+      <figure class="menu__media" data-menu-media>
+        <img decoding="async" src="assets/img/zyra-banner.webp" alt="" width="1400" height="730" loading="lazy">
+      </figure>
+      <div class="menu__meta">
+        <p class="menu__claim" data-i18n="t13">Tecnología sin humo.<br>Soluciones que funcionan.</p>
+        <ul class="menu__contact">
+          <li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+          <li><a href="https://wa.me/34643412454" data-i18n="t14">WhatsApp directo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<main id="main">
+<section class="hero" id="inicio">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__grid">
+    <div class="hero__lead">
+      <h1 class="hero__title" data-i18n-lines='["We transform","businesses with","technology."]'>
+        <span class="line"><span class="line__in">Transformamos</span></span>
+        <span class="line"><span class="line__in">negocios con</span></span>
+        <span class="line"><span class="line__in">tecnología.</span></span>
+      </h1>
+      <p class="hero__copy" data-hero="copy" data-i18n="t61">Diseñamos webs, desarrollamos software y creamos soluciones de automatización e inteligencia artificial para ayudar a las empresas a trabajar mejor y crecer.</p>
+      <div class="hero__cta" data-hero="cta">
+        <a class="btn btn--light" href="contacto/index.html" data-magnet data-i18n="t62">Cuéntanos tu proyecto</a>
+        <a class="btn btn--ghost" href="servicios/index.html" data-magnet data-i18n="t63">Ver servicios</a>
+      </div>
+    </div>
+
+    <div class="showcase" data-hero="show" aria-hidden="true">
+      <span class="showcase__glow"></span>
+      <span class="showcase__arc"></span>
+      <div class="showcase__frame">
+        <div class="showcase__bar"><i></i><i></i><i></i><span class="mono">zyra.tech</span></div>
+        <video class="showcase__video" autoplay muted loop playsinline preload="none"
+               poster="assets/img/zyra-demo-poster.webp">
+          <source data-src="assets/video/zyra-demo.mp4" type="video/mp4">
+        </video>
+        <span class="showcase__sheen"></span>
+      </div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span data-i18n="t64">Desliza</span><i></i></div>
+</section>
+
+<section class="manifesto" id="manifiesto">
+  <p class="manifesto__text" data-reveal-words data-i18n="t65">Tecnología sin humo. Construimos lo que un negocio necesita de verdad: webs que representan bien a la marca, software que encaja con la forma real de trabajar y automatizaciones que devuelven horas cada semana.</p>
+  <div class="pillars">
+    <article class="pillar"><h3 data-i18n="t66">Visión a largo plazo</h3><p data-i18n="t67">No resolvemos solo el problema de hoy: construimos pensando en lo que tu negocio necesitará mañana.</p></article>
+    <article class="pillar"><h3 data-i18n="t68">Tecnología escalable</h3><p data-i18n="t69">Cada solución está preparada para crecer al ritmo de tu empresa, sin empezar de cero.</p></article>
+    <article class="pillar"><h3 data-i18n="t70">Un equipo, todo el proceso</h3><p data-i18n="t71">Diseño, desarrollo y automatización bajo una misma visión, sin depender de varios proveedores.</p></article>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="services__pin">
+    <header class="services__head">
+      <h2 class="h-section" data-i18n="t72">Qué hacemos</h2>
+      <p class="services__hint" aria-hidden="true"><span class="mono">01</span> / <span class="mono">04</span></p>
+    </header>
+    <div class="services__track" id="servicesTrack"><article class="service">
+  <div class="service__text">
+    <h3 class="service__name">Desarrollo<br>web</h3>
+    <p class="service__claim" data-i18n="t19">Webs que representan bien al negocio.</p>
+    <ul class="service__list"><li data-i18n="t15">Diseño a medida, sin plantillas cerradas</li><li data-i18n="t16">Rendimiento y SEO básico</li><li data-i18n="t17">Responsive real en móvil y tablet</li><li data-i18n="t18">Formulario de contacto, SSL y dominio</li></ul>
+    <div class="service__foot">
+      <p class="service__price" data-i18n="t20">El precio se cierra contigo por WhatsApp, según el alcance real del proyecto.</p>
+      <a class="alink" href="servicios/desarrollo-web/index.html" data-i18n="t21">Saber más</a>
+    </div>
+  </div>
+  <figure class="service__media"><img decoding="async" src="assets/img/mockup-portatil-movil.webp" alt="Web de ZYRA en un portátil" loading="lazy" width="1100" height="710"></figure>
+</article><article class="service">
+  <div class="service__text">
+    <h3 class="service__name">Software<br>a medida</h3>
+    <p class="service__claim" data-i18n="t26">Pensado para cómo trabaja cada negocio.</p>
+    <ul class="service__list"><li data-i18n="t22">Análisis del proceso actual</li><li data-i18n="t23">Diseño de la aplicación contigo</li><li data-i18n="t24">Desarrollo ampliable por fases</li><li data-i18n="t25">Pruebas con datos reales</li></ul>
+    <div class="service__foot">
+      <p class="service__price" data-i18n="t27">El precio se cierra contigo por WhatsApp, según el alcance real del proyecto.</p>
+      <a class="alink" href="servicios/software-a-medida/index.html" data-i18n="t28">Saber más</a>
+    </div>
+  </div>
+  <figure class="service__media"><img decoding="async" src="assets/img/iphone-software-medida.webp" alt="Panel de ZYRA en un ordenador de escritorio" loading="lazy" width="292" height="527"></figure>
+</article><article class="service">
+  <div class="service__text">
+    <h3 class="service__name">Automa-<br>tización</h3>
+    <p class="service__claim" data-i18n="t33">Menos tareas repetitivas, más tiempo para el negocio.</p>
+    <ul class="service__list"><li data-i18n="t29">Mapeo de las tareas que se repiten</li><li data-i18n="t30">Conexión entre las herramientas que ya usas</li><li data-i18n="t31">Flujos automáticos con avisos</li><li data-i18n="t32">Pruebas reales antes de activar</li></ul>
+    <div class="service__foot">
+      <p class="service__price" data-i18n="t34">El precio se cierra contigo por WhatsApp, según el alcance real del proyecto.</p>
+      <a class="alink" href="servicios/automatizacion/index.html" data-i18n="t35">Saber más</a>
+    </div>
+  </div>
+  <figure class="service__media"><img decoding="async" src="assets/img/automtizacion.webp" alt="Flujos de ZYRA en portátil y móvil" loading="lazy" width="612" height="408"></figure>
+</article><article class="service">
+  <div class="service__text">
+    <h3 class="service__name">Agentes<br>de IA</h3>
+    <p class="service__claim" data-i18n="t40">Un agente que atiende mientras el equipo se ocupa del resto.</p>
+    <ul class="service__list"><li data-i18n="t36">Casos de uso definidos contigo</li><li data-i18n="t37">Entrenamiento con tu información real</li><li data-i18n="t38">Integración en web y WhatsApp</li><li data-i18n="t39">Reglas de derivación a una persona</li></ul>
+    <div class="service__foot">
+      <p class="service__price" data-i18n="t41">El precio se cierra contigo por WhatsApp, según el alcance real del proyecto.</p>
+      <a class="alink" href="servicios/agentes-de-ia/index.html" data-i18n="t42">Saber más</a>
+    </div>
+  </div>
+  <figure class="service__media"><img decoding="async" src="assets/img/ipad-chatbot.webp" alt="Agente de IA de ZYRA en el móvil" loading="lazy" width="577" height="433"></figure>
+</article></div>
+  </div>
+</section>
+
+<section class="pricing" id="empezar">
+  <header class="shead"><p class="kicker" data-i18n="t73">Por dónde empezar</p><h2 class="h-section" data-i18n="t74">Elige un punto de partida.</h2><p class="shead__lead" data-i18n="t75">Son puntos de partida orientativos: ajustamos el alcance a lo que necesite tu negocio y cerramos el precio contigo por WhatsApp.</p></header>
+  <ul class="rates"><li class="rate" data-rate><h3 data-i18n="t43">Web Esencial</h3><p data-i18n="t44">Una web profesional y rápida para dar el salto online, con las páginas clave de tu negocio.</p><a class="alink" href="servicios/desarrollo-web/index.html" data-i18n="t45">Saber más</a></li><li class="rate" data-rate><h3 data-i18n="t46">Web + Mantenimiento</h3><p data-i18n="t47">Tu web siempre actualizada, con copias de seguridad, revisiones y soporte continuo.</p><a class="alink" href="servicios/desarrollo-web/index.html" data-i18n="t48">Saber más</a></li><li class="rate" data-rate><h3 data-i18n="t49">Web Avanzada</h3><p data-i18n="t50">Funcionalidades a medida — reservas, catálogos, áreas privadas — para necesidades específicas.</p><a class="alink" href="servicios/desarrollo-web/index.html" data-i18n="t51">Saber más</a></li><li class="rate" data-rate><h3 data-i18n="t52">Agentes de IA</h3><p data-i18n="t53">Chatbots y agentes que atienden consultas, informan y gestionan reservas de forma autónoma.</p><a class="alink" href="servicios/agentes-de-ia/index.html" data-i18n="t54">Saber más</a></li><li class="rate" data-rate><h3 data-i18n="t55">Software a medida</h3><p data-i18n="t56">Aplicaciones internas para gestionar tu operación: clientes, pedidos, inventario o equipo.</p><a class="alink" href="servicios/software-a-medida/index.html" data-i18n="t57">Saber más</a></li><li class="rate" data-rate><h3 data-i18n="t58">Automatización + IA</h3><p data-i18n="t59">Conectamos tus herramientas y automatizamos procesos repetitivos de principio a fin.</p><a class="alink" href="servicios/automatizacion/index.html" data-i18n="t60">Saber más</a></li></ul>
+</section>
+
+<section class="process" id="proceso">
+  <div class="process__sticky">
+    <header class="shead"><p class="kicker" data-i18n="t76">Cómo trabajamos</p><h2 class="h-section" data-i18n="t77">Un proceso claro,<br>de principio a fin.</h2></header>
+    <p class="process__note" data-i18n="t78">El mismo camino en los cuatro servicios. Cambia la tecnología, no la forma de trabajar.</p>
+    <a class="alink" href="como-trabajamos/index.html" data-i18n="t79">Ver el proceso al detalle, servicio por servicio</a>
+  </div>
+  <ol class="steps"><li class="step"><span class="step__n mono">01</span><h3 data-i18n="t80">Cuéntanos</h3><p data-i18n="t81">Una conversación para entender el problema real: qué falla hoy, qué se repite y qué esperas que cambie.</p></li><li class="step"><span class="step__n mono">02</span><h3 data-i18n="t82">Analizamos</h3><p data-i18n="t83">Definimos alcance, tecnología y tiempos, y te lo contamos antes de que empiece nada.</p></li><li class="step"><span class="step__n mono">03</span><h3 data-i18n="t84">Diseñamos y desarrollamos</h3><p data-i18n="t85">Construimos y probamos por fases, enseñando avances para que no haya sorpresas al final.</p></li><li class="step"><span class="step__n mono">04</span><h3 data-i18n="t86">Lanzamos y mejoramos</h3><p data-i18n="t87">Se publica, se mide con uso real y se ajusta. El proyecto sigue vivo después de la entrega.</p></li><li class="steps__line" aria-hidden="true"><i></i></li></ol>
+</section>
+
+<section class="why">
+  <header class="shead"><p class="kicker" data-i18n="t88">Por qué nosotros</p><h2 class="h-section" data-i18n="t89">Una sola agencia para toda tu tecnología.</h2></header>
+  <ul class="cards"><li class="card"><h3 data-i18n="t90">Soluciones a medida</h3><p data-i18n="t91">No todos los negocios necesitan lo mismo, así que no partimos de una plantilla cerrada.</p></li><li class="card"><h3 data-i18n="t92">Tecnología actual</h3><p data-i18n="t93">Construimos con herramientas modernas, responsive y preparadas para crecer.</p></li><li class="card"><h3 data-i18n="t94">Más que una web</h3><p data-i18n="t95">Web, software, automatización e IA bajo una misma visión, sin fragmentar tu proyecto.</p></li><li class="card"><h3 data-i18n="t96">Enfoque empresarial</h3><p data-i18n="t97">La tecnología debe resolver problemas reales y ahorrarte tiempo, no complicarte la vida.</p></li></ul>
+</section>
+
+<section class="trust" id="transparencia">
+  <div class="trust__grid">
+    <div class="trust__lead">
+      <p class="kicker" data-i18n="t98">Transparencia</p>
+      <h2 class="h-display" data-i18n="t99">Compromisos claros desde el primer contacto.</h2>
+      <p data-i18n="t100">Zyra es una agencia nueva y preferimos decirlo en vez de inventar cifras. Esto es lo que sí podemos prometerte.</p>
+      <a class="alink" href="sobre-nosotros/index.html" data-i18n="t101">Conócenos</a>
+    </div>
+    <ul class="promises"><li><span class="mono">01</span><span data-i18n="t102">Contrato claro antes de empezar</span></li><li><span class="mono">02</span><span data-i18n="t103">Comunicación directa con quien desarrolla</span></li><li><span class="mono">03</span><span data-i18n="t104">Sin permanencia forzosa en el mantenimiento</span></li><li><span class="mono">04</span><span data-i18n="t105">Presupuesto cerrado antes de empezar</span></li></ul>
+  </div>
+</section>
+
+<section class="reviews" id="opiniones" data-reviews>
+  <header class="shead reviews__head">
+    <p class="kicker" data-i18n="t106">Opiniones</p>
+    <h2 class="h-section" data-i18n="t107">Lo que dicen<br>quienes ya trabajan con nosotros.</h2>
+  </header>
+</section>
+
+<section class="faq" id="faq">
+  <header class="shead"><p class="kicker" data-i18n="t108">Preguntas frecuentes</p><h2 class="h-section" data-i18n="t109">Lo que la gente suele preguntarnos.</h2></header>
+  <div class="faq__list"><details class="qa"><summary><span data-i18n="t110">¿Cuánto tarda un proyecto típico?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t111">Una web esencial suele estar lista en 1–2 semanas. Software a medida o automatización dependen del alcance y se acuerda un calendario tras la primera llamada.</p></div></details><details class="qa"><summary><span data-i18n="t112">¿Cómo se paga?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t113">Depende del servicio: los proyectos cerrados suelen dividirse en un pago inicial y otro a la entrega; el mantenimiento y la automatización recurrente se facturan mensualmente.</p></div></details><details class="qa"><summary><span data-i18n="t114">¿Cuánto cuesta?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t115">Depende del alcance real, así que no publicamos tarifas cerradas. Nos cuentas qué necesitas por WhatsApp o formulario y te pasamos un presupuesto cerrado, sin partidas abiertas.</p></div></details><details class="qa"><summary><span data-i18n="t116">¿Hay permanencia en el mantenimiento?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t117">No. Puedes cancelarlo cuando quieras, sin penalización ni preaviso largo.</p></div></details><details class="qa"><summary><span data-i18n="t118">¿Qué pasa si el alcance cambia a mitad de proyecto?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t119">Lo hablamos y ajustamos presupuesto y plazos antes de seguir — nunca se añade trabajo extra sin que lo sepas de antemano.</p></div></details><details class="qa"><summary><span data-i18n="t120">¿Dais soporte después de entregar?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t121">Sí, con los planes de mantenimiento. Sin plan, seguimos disponibles para incidencias puntuales facturadas aparte.</p></div></details></div>
+</section>
+
+<section class="quiz" id="recomendador"></section>
+
+<section class="contact" id="contacto">
+  <div class="contact__glow" aria-hidden="true"></div>
+  <div class="unfold" data-unfold>
+  <button class="unfold__cue" type="button" data-unfold-cue aria-controls="unfoldPanel" aria-expanded="false">
+    <span class="unfold__text" data-en="Talk about my project">Hablar de mi proyecto</span>
+    <span class="unfold__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5v14M5.5 12l6.5 6.5L18.5 12"/></svg></span>
+  </button>
+  <div class="unfold__panel" id="unfoldPanel">
+  <div class="contact__grid">
+    <div class="contact__lead">
+      <p class="kicker" data-i18n="t122">Contacto</p>
+      <h2 class="h-display" data-i18n="t123">¿Hablamos de<br>tu proyecto?</h2>
+      <p data-i18n="t124">Cuéntanos qué necesita tu negocio y estudiamos la solución que mejor encaje. El precio se cierra contigo por WhatsApp, según el alcance real.</p>
+      <ul class="contact__direct">
+        <li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+        <li><a href="https://wa.me/34643412454">+34 643 41 24 54 (WhatsApp)</a></li>
+      </ul>
+    </div>
+    <div class="forms">
+  <div class="forms__switch" role="tablist" data-on="0">
+    <button role="tab" id="tab-info" type="button" aria-controls="form-info" aria-selected="true" class="is-on" data-i18n="t125">Rellenar formulario</button>
+    <button role="tab" id="tab-cita" type="button" aria-controls="form-cita" aria-selected="false" data-i18n="t126">Agendar cita</button>
+    <span class="forms__ink" aria-hidden="true"></span>
+  </div>
+
+  <form class="form" id="form-info" role="tabpanel" aria-labelledby="tab-info" novalidate><div class="hp" aria-hidden="true"><label>No rellenar este campo<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="field"><label for="i-nombre" data-i18n="t127">Nombre o empresa</label><input id="i-nombre" name="nombre" required></div>
+    <div class="field"><label for="i-email" data-i18n="t128">Email</label><input id="i-email" name="email" type="email" required></div>
+    <div class="field"><label for="i-tel" data-i18n="t129">Teléfono o WhatsApp</label><input id="i-tel" name="telefono" type="tel"></div>
+    <div class="field"><label for="i-servicio" data-i18n="t130">Servicio de interés</label>
+      <select id="i-servicio" name="servicio"><option>Desarrollo web</option><option>Software a medida</option><option>Automatización</option><option>Agentes de IA</option><option data-i18n="t131">Aún no lo tengo claro</option></select></div>
+    <div class="field field--full"><label for="i-mensaje" data-i18n="t132">Cuéntanos tu proyecto</label><textarea id="i-mensaje" name="mensaje" rows="4" required></textarea></div>
+    <label class="check field--full"><input type="checkbox" required><span data-i18n="t133">He leído y acepto la política de privacidad.</span></label>
+    <button class="btn btn--light form__send" type="submit" data-magnet data-i18n="t134">Solicitar información</button>
+    <p class="form__done" hidden data-i18n="t135">Solicitud enviada. Te respondemos por email o WhatsApp en menos de 24 horas laborables.</p>
+  </form>
+
+  <form class="form" id="form-cita" role="tabpanel" aria-labelledby="tab-cita" hidden novalidate><div class="hp" aria-hidden="true"><label>No rellenar este campo<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <div class="field"><label for="c-nombre" data-i18n="t136">Nombre o empresa</label><input id="c-nombre" name="nombre" required></div>
+    <div class="field"><label for="c-email" data-i18n="t137">Email</label><input id="c-email" name="email" type="email" required></div>
+    <div class="field"><label for="c-tel" data-i18n="t138">Teléfono o WhatsApp</label><input id="c-tel" name="telefono" type="tel"></div>
+    <div class="field"><label for="c-servicio" data-i18n="t139">Servicio</label><select id="c-servicio" name="servicio"><option>Desarrollo web</option><option>Software a medida</option><option>Automatización</option><option>Agentes de IA</option></select></div>
+    <div class="field"><label for="c-fecha" data-i18n="t140">Fecha deseada</label><input id="c-fecha" name="fecha" type="date" required></div>
+    <div class="field"><label for="c-franja" data-i18n="t141">Franja horaria</label>
+      <select id="c-franja" name="franja">
+        <option data-i18n="t142">Mañana (9:00–13:00)</option>
+        <option data-i18n="t143">Tarde (16:00–19:00)</option>
+        <option data-i18n="t144">Cualquier hora</option>
+      </select></div>
+    <div class="field field--full"><label for="c-mensaje" data-i18n="t145">Mensaje (opcional)</label><textarea id="c-mensaje" name="mensaje" rows="3"></textarea></div>
+    <label class="check field--full"><input type="checkbox" required><span data-i18n="t146">He leído y acepto la política de privacidad.</span></label>
+    <p class="form__warn field--full" data-i18n="t147">Esto es una solicitud, no una reserva confirmada: te escribimos por WhatsApp o email para cerrar el día y la hora exactos.</p>
+    <button class="btn btn--light form__send" type="submit" data-magnet data-i18n="t148">Solicitar cita</button>
+    <p class="form__done" hidden data-i18n="t149">Solicitud recibida. Te confirmamos día y hora por email o WhatsApp.</p>
+  </form>
+</div>
+  </div>
+  </div>
+</div>
+</section>
+</main><footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a class="footer__mark" href="index.html" aria-label="ZYRA">
+        <img decoding="async" src="assets/img/zyra-simbolo.webp" alt="" width="36" height="34"><span>ZYRA</span>
+      </a>
+      <p data-i18n="t159">Diseñamos webs, desarrollamos software y creamos soluciones de automatización e IA para empresas que quieren crecer.</p>
+    </div>
+    <nav class="footer__links" aria-label="Enlaces"><a href="servicios/desarrollo-web/index.html" data-i18n="t150">Desarrollo web</a><a href="servicios/automatizacion/index.html" data-i18n="t151">Automatización</a><a href="servicios/agentes-de-ia/index.html" data-i18n="t152">Agentes de IA</a><a href="sobre-nosotros/index.html" data-i18n="t153">Sobre nosotros</a><a href="servicios/index.html" data-i18n="t154">Servicios</a><a href="contacto/index.html" data-i18n="t155">Contacto</a></nav>
+    <div class="footer__social">
+      <p class="footer__label" data-i18n="t160">Redes sociales</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3.5v10.9a3.6 3.6 0 1 1-3.1-3.57"/><path d="M14.4 3.5c.5 2.4 2 3.9 4.5 4.2"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5.4" width="18.8" height="13.2" rx="4.2"/><path d="M10.4 9.5l4.6 2.5-4.6 2.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__legal"><a href="legal/aviso-legal/index.html" data-i18n="t156">Aviso legal</a><a href="legal/privacidad/index.html" data-i18n="t157">Privacidad</a><a href="legal/cookies/index.html" data-i18n="t158">Cookies</a></span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" crossorigin="anonymous"></script>
+<script src="assets/js/cookies.js?v=27"></script>
+<script src="assets/js/i18n.js?v=27"></script>
+<script src="assets/js/zyra.js?v=27"></script>
+<script src="assets/js/resenas.js?v=27"></script>
+</body>
+</html>

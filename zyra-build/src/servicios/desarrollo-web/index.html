@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t449">Desarrollo web — ZYRA</title>
+<meta name="description" content="Webs corporativas, páginas para negocios locales, landing pages y rediseño de webs antiguas.">
+<meta name="theme-color" content="#07090D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Desarrollo web — ZYRA">
+<meta property="og:description" content="Webs corporativas, páginas para negocios locales, landing pages y rediseño de webs antiguas.">
+<meta property="og:image" content="../../assets/img/og-zyra.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/zyra.css?v=27">
+<link rel="stylesheet" href="../../assets/css/resenas.css?v=1">
+<script src="../../assets/js/boot.js?v=27"></script>
+</head>
+<body data-page="servicios/desarrollo-web/">
+<noscript><link rel="stylesheet" href="../../assets/css/nojs.css?v=27"></noscript>
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__mark"><img decoding="async" src="../../assets/img/zyra-simbolo.webp" alt="" width="120" height="113"><span class="curtain__word">ZYRA</span></div>
+</div>
+<canvas class="spark" id="spark" aria-hidden="true"></canvas>
+<a class="skip" href="#main" data-i18n="t450">Saltar al contenido</a>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="../../index.html" aria-label="ZYRA">
+    <img decoding="async" src="../../assets/img/zyra-simbolo.webp" alt="" width="34" height="32"><span>ZYRA</span>
+  </a>
+  <div class="nav__actions">
+    <button class="icon-btn icon-btn--theme" id="themeBtn" type="button" title="Cambiar tema" aria-label="Cambiar tema"><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--sun"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--moon"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg></button>
+    <div class="lang" id="lang">
+      <button class="icon-btn icon-btn--lang" id="langBtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Cambiar idioma">
+        <span id="langLabel">ES</span><i class="lang__chev" aria-hidden="true"></i>
+      </button>
+      <div class="lang__drop" id="langDrop" hidden>
+        <button type="button" data-lang="es" class="is-on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" title="Menú" aria-label="Menú">
+      <span class="burger__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu__bg" aria-hidden="true"></div>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Menú completo">
+      <a class="menu__item" href="../../index.html"><span class="mlabel" data-i18n="t455">Inicio</span></a>
+      <div class="menu__group">
+        <button class="menu__item menu__toggle" type="button" id="svcToggle" aria-expanded="false" aria-controls="svcDrop">
+          <span class="mlabel" data-i18n="t456">Servicios</span>
+          <i class="menu__chev" aria-hidden="true"></i>
+        </button>
+        <div class="menu__drop" id="svcDrop" hidden>
+          <a href="../../servicios/desarrollo-web/index.html" data-i18n="t451">Desarrollo web</a><a href="../../servicios/software-a-medida/index.html" data-i18n="t452">Software a medida</a><a href="../../servicios/automatizacion/index.html" data-i18n="t453">Automatización</a><a href="../../servicios/agentes-de-ia/index.html" data-i18n="t454">Agentes de IA</a>
+          <a class="menu__all" href="../../servicios/index.html" data-i18n="t457">Ver todos los servicios</a>
+        </div>
+      </div>
+      <a class="menu__item" href="../../como-trabajamos/index.html"><span class="mlabel" data-i18n="t458">Cómo trabajamos</span></a>
+      <a class="menu__item" href="../../sobre-nosotros/index.html"><span class="mlabel" data-i18n="t459">Sobre nosotros</span></a>
+      <a class="menu__item" href="../../contacto/index.html"><span class="mlabel" data-i18n="t460">Contacto</span></a>
+    </nav>
+    <div class="menu__side">
+      <figure class="menu__media" data-menu-media>
+        <img decoding="async" src="../../assets/img/zyra-banner.webp" alt="" width="1400" height="730" loading="lazy">
+      </figure>
+      <div class="menu__meta">
+        <p class="menu__claim" data-i18n="t461">Tecnología sin humo.<br>Soluciones que funcionan.</p>
+        <ul class="menu__contact">
+          <li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+          <li><a href="https://wa.me/34643412454" data-i18n="t462">WhatsApp directo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<main id="main">
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <nav class="crumb" aria-label="Ruta"><a href="../../index.html" data-i18n="t468">Inicio</a><i aria-hidden="true">/</i><span data-i18n="t469">Desarrollo web</span></nav>
+  <p class="kicker" data-i18n="t470">Servicio</p>
+  <h1 class="phero__title h-display" data-i18n="t471">Desarrollo web</h1>
+  <p class="phero__lead" data-i18n="t472">Webs corporativas, páginas para negocios locales, landing pages y rediseño de webs antiguas.</p>
+</section>
+<section class="wrap split">
+  <div class="split__main">
+    <h2 class="h-section" data-i18n="t473">Qué incluye</h2>
+    <ul class="ticks"><li data-i18n="t463">Diseño a medida, sin plantillas cerradas</li><li data-i18n="t464">Rendimiento y SEO básico</li><li data-i18n="t465">Responsive real en móvil y tablet</li><li data-i18n="t466">Formulario de contacto, SSL y dominio</li><li data-i18n="t467">Una ronda de revisiones incluida</li></ul>
+    <h2 class="h-section split__gap" data-i18n="t474">Para quién es</h2>
+    <p class="lead" data-i18n="t475">Negocios y profesionales que necesitan una presencia online que explique bien lo que hacen y les traiga contactos, no solo una web bonita.</p>
+  </div>
+  <aside class="facts">
+    <div class="fact"><dt data-i18n="t476">Plazo orientativo</dt><dd data-i18n="t477">1–2 semanas la web esencial · 3–5 semanas la avanzada</dd></div>
+    <div class="fact"><dt data-i18n="t478">Tecnología</dt><dd data-i18n="t479">Figma, HTML/CSS/JS y React o Next.js cuando el proyecto lo pide. Hosting según el caso.</dd></div>
+    <div class="fact"><dt data-i18n="t480">Precio</dt><dd data-i18n="t481">El precio se cierra contigo por WhatsApp, según el alcance real del proyecto.</dd></div>
+    <a class="btn btn--light fact__cta" href="https://wa.me/34643412454" data-magnet data-i18n="t482">Pedir precio por WhatsApp</a>
+  </aside>
+  <figure class="split__media"><img decoding="async" src="../../assets/img/mockup-portatil-movil.webp" alt="Web de ZYRA en un portátil" loading="lazy" width="1100" height="710"></figure>
+</section>
+<section class="process">
+  <div class="process__sticky">
+    <header class="shead"><p class="kicker" data-i18n="t483">Proceso</p><h2 class="h-section" data-i18n="t484">Cómo lo hacemos.</h2></header>
+    <a class="alink" href="../../como-trabajamos/index.html" data-i18n="t485">Ver el detalle completo</a>
+  </div>
+  <ol class="steps"><li class="step"><span class="step__n mono">01</span><h3 data-i18n="t486">Cuéntanos</h3><p data-i18n="t487">Una conversación para entender el problema real: qué falla hoy, qué se repite y qué esperas que cambie.</p></li><li class="step"><span class="step__n mono">02</span><h3 data-i18n="t488">Analizamos</h3><p data-i18n="t489">Definimos alcance, tecnología y tiempos, y te lo contamos antes de que empiece nada.</p></li><li class="step"><span class="step__n mono">03</span><h3 data-i18n="t490">Diseñamos y desarrollamos</h3><p data-i18n="t491">Construimos y probamos por fases, enseñando avances para que no haya sorpresas al final.</p></li><li class="step"><span class="step__n mono">04</span><h3 data-i18n="t492">Lanzamos y mejoramos</h3><p data-i18n="t493">Se publica, se mide con uso real y se ajusta. El proyecto sigue vivo después de la entrega.</p></li><li class="steps__line" aria-hidden="true"><i></i></li></ol>
+</section>
+<section class="faq">
+  <header class="shead"><p class="kicker" data-i18n="t494">Preguntas frecuentes</p><h2 class="h-section" data-i18n="t495">Dudas habituales de este servicio.</h2></header>
+  <div class="faq__list"><details class="qa"><summary><span data-i18n="t496">¿Puedo pedir cambios después?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t497">Sí. Hay una ronda de revisiones incluida y, si más adelante quieres ampliar, se valora aparte antes de tocar nada.</p></div></details><details class="qa"><summary><span data-i18n="t498">¿Quién se queda el dominio y el alojamiento?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t499">Tú. Podemos configurarlo nosotros o trabajar sobre el que ya tengas, pero las cuentas quedan siempre a tu nombre.</p></div></details><details class="qa"><summary><span data-i18n="t500">¿Cuánto cuesta?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t501">Depende del alcance real, así que no publicamos tarifas cerradas. Nos cuentas qué necesitas por WhatsApp o formulario y te pasamos un presupuesto cerrado, sin partidas abiertas.</p></div></details><details class="qa"><summary><span data-i18n="t502">¿Qué pasa si el alcance cambia a mitad de proyecto?</span><i aria-hidden="true"></i></summary><div class="qa__body"><p data-i18n="t503">Lo hablamos y ajustamos presupuesto y plazos antes de seguir — nunca se añade trabajo extra sin que lo sepas de antemano.</p></div></details></div>
+</section>
+<section class="band">
+  <div class="band__glow" aria-hidden="true"></div>
+  <h2 class="h-display" data-i18n="t504">Cuéntanos<br>tu proyecto.</h2>
+  <p data-i18n="t505">Nos escribes, lo miramos y te decimos qué haríamos y cuánto costaría. Sin compromiso.</p>
+  <div class="band__cta">
+    <a class="btn btn--light" href="../../contacto/index.html" data-magnet data-i18n="t506">Cuéntanos tu proyecto</a>
+    <a class="btn btn--ghost" href="https://wa.me/34643412454" data-magnet data-i18n="t507">WhatsApp directo</a>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a class="footer__mark" href="../../index.html" aria-label="ZYRA">
+        <img decoding="async" src="../../assets/img/zyra-simbolo.webp" alt="" width="36" height="34"><span>ZYRA</span>
+      </a>
+      <p data-i18n="t517">Diseñamos webs, desarrollamos software y creamos soluciones de automatización e IA para empresas que quieren crecer.</p>
+    </div>
+    <nav class="footer__links" aria-label="Enlaces"><a href="../../servicios/desarrollo-web/index.html" data-i18n="t508">Desarrollo web</a><a href="../../servicios/automatizacion/index.html" data-i18n="t509">Automatización</a><a href="../../servicios/agentes-de-ia/index.html" data-i18n="t510">Agentes de IA</a><a href="../../sobre-nosotros/index.html" data-i18n="t511">Sobre nosotros</a><a href="../../servicios/index.html" data-i18n="t512">Servicios</a><a href="../../contacto/index.html" data-i18n="t513">Contacto</a></nav>
+    <div class="footer__social">
+      <p class="footer__label" data-i18n="t518">Redes sociales</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3.5v10.9a3.6 3.6 0 1 1-3.1-3.57"/><path d="M14.4 3.5c.5 2.4 2 3.9 4.5 4.2"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5.4" width="18.8" height="13.2" rx="4.2"/><path d="M10.4 9.5l4.6 2.5-4.6 2.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__legal"><a href="../../legal/aviso-legal/index.html" data-i18n="t514">Aviso legal</a><a href="../../legal/privacidad/index.html" data-i18n="t515">Privacidad</a><a href="../../legal/cookies/index.html" data-i18n="t516">Cookies</a></span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" crossorigin="anonymous"></script>
+<script src="../../assets/js/cookies.js?v=27"></script>
+<script src="../../assets/js/i18n.js?v=27"></script>
+<script src="../../assets/js/zyra.js?v=27"></script>
+<script src="../../assets/js/resenas.js?v=27"></script>
+</body>
+</html>

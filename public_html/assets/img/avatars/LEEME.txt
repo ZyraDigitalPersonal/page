@@ -1,0 +1,2 @@
+Las fotos de perfil de quienes dejan reseña con Google se guardan aquí.
+Se crean solas al recibir la primera reseña verificada.

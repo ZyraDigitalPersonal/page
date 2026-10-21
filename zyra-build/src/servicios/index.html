@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="t161">Servicios — ZYRA</title>
+<meta name="description" content="Desarrollo web, software a medida, automatización y agentes de IA para negocios que quieren trabajar mejor.">
+<meta name="theme-color" content="#07090D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Servicios — ZYRA">
+<meta property="og:description" content="Desarrollo web, software a medida, automatización y agentes de IA para negocios que quieren trabajar mejor.">
+<meta property="og:image" content="../assets/img/og-zyra.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/zyra.css?v=27">
+<link rel="stylesheet" href="../assets/css/resenas.css?v=1">
+<script src="../assets/js/boot.js?v=27"></script>
+</head>
+<body data-page="servicios/">
+<noscript><link rel="stylesheet" href="../assets/css/nojs.css?v=27"></noscript>
+<div class="curtain" id="curtain" aria-hidden="true">
+  <div class="curtain__mark"><img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="120" height="113"><span class="curtain__word">ZYRA</span></div>
+</div>
+<canvas class="spark" id="spark" aria-hidden="true"></canvas>
+<a class="skip" href="#main" data-i18n="t162">Saltar al contenido</a>
+<header class="nav" id="nav">
+  <a class="nav__brand" href="../index.html" aria-label="ZYRA">
+    <img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="34" height="32"><span>ZYRA</span>
+  </a>
+  <div class="nav__actions">
+    <button class="icon-btn icon-btn--theme" id="themeBtn" type="button" title="Cambiar tema" aria-label="Cambiar tema"><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--sun"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" class="ic ic--moon"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"/></svg></button>
+    <div class="lang" id="lang">
+      <button class="icon-btn icon-btn--lang" id="langBtn" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Cambiar idioma">
+        <span id="langLabel">ES</span><i class="lang__chev" aria-hidden="true"></i>
+      </button>
+      <div class="lang__drop" id="langDrop" hidden>
+        <button type="button" data-lang="es" class="is-on">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" title="Menú" aria-label="Menú">
+      <span class="burger__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden>
+  <div class="menu__bg" aria-hidden="true"></div>
+  <div class="menu__inner">
+    <nav class="menu__nav" aria-label="Menú completo">
+      <a class="menu__item" href="../index.html"><span class="mlabel" data-i18n="t167">Inicio</span></a>
+      <div class="menu__group">
+        <button class="menu__item menu__toggle" type="button" id="svcToggle" aria-expanded="false" aria-controls="svcDrop">
+          <span class="mlabel" data-i18n="t168">Servicios</span>
+          <i class="menu__chev" aria-hidden="true"></i>
+        </button>
+        <div class="menu__drop" id="svcDrop" hidden>
+          <a href="../servicios/desarrollo-web/index.html" data-i18n="t163">Desarrollo web</a><a href="../servicios/software-a-medida/index.html" data-i18n="t164">Software a medida</a><a href="../servicios/automatizacion/index.html" data-i18n="t165">Automatización</a><a href="../servicios/agentes-de-ia/index.html" data-i18n="t166">Agentes de IA</a>
+          <a class="menu__all" href="../servicios/index.html" data-i18n="t169">Ver todos los servicios</a>
+        </div>
+      </div>
+      <a class="menu__item" href="../como-trabajamos/index.html"><span class="mlabel" data-i18n="t170">Cómo trabajamos</span></a>
+      <a class="menu__item" href="../sobre-nosotros/index.html"><span class="mlabel" data-i18n="t171">Sobre nosotros</span></a>
+      <a class="menu__item" href="../contacto/index.html"><span class="mlabel" data-i18n="t172">Contacto</span></a>
+    </nav>
+    <div class="menu__side">
+      <figure class="menu__media" data-menu-media>
+        <img decoding="async" src="../assets/img/zyra-banner.webp" alt="" width="1400" height="730" loading="lazy">
+      </figure>
+      <div class="menu__meta">
+        <p class="menu__claim" data-i18n="t173">Tecnología sin humo.<br>Soluciones que funcionan.</p>
+        <ul class="menu__contact">
+          <li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+          <li><a href="https://wa.me/34643412454" data-i18n="t174">WhatsApp directo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<main id="main">
+<section class="phero">
+  <div class="phero__glow" aria-hidden="true"></div>
+  <nav class="crumb" aria-label="Ruta"><a href="../index.html" data-i18n="t205">Inicio</a><i aria-hidden="true">/</i><span data-i18n="t206">Servicios</span></nav>
+  <p class="kicker" data-i18n="t207">Servicios</p>
+  <h1 class="phero__title h-display" data-i18n="t208">Cuatro formas de mover<br>tu negocio hacia adelante.</h1>
+  <p class="phero__lead" data-i18n="t209">Web, software, automatización e IA. Puedes empezar por una sola pieza o por el conjunto: lo importante es que resuelva algo concreto.</p>
+</section>
+<section class="wrap"><div class="scards"><article class="scard">
+  <span class="card__n mono">01</span>
+  <h3 data-i18n="t175">Desarrollo web</h3>
+  <p data-i18n="t176">Webs corporativas, páginas para negocios locales, landing pages y rediseño de webs antiguas.</p>
+  <figure class="scard__media"><img decoding="async" src="../assets/img/mockup-portatil.webp" alt="Web de ZYRA en un portátil" loading="lazy" width="1100" height="665"></figure>
+  <a class="alink" href="../servicios/desarrollo-web/index.html" data-i18n="t177">Saber más</a>
+</article><article class="scard">
+  <span class="card__n mono">02</span>
+  <h3 data-i18n="t178">Software a medida</h3>
+  <p data-i18n="t179">Aplicaciones para gestión, clientes, reservas, operaciones y necesidades específicas de tu negocio.</p>
+  <figure class="scard__media"><img decoding="async" src="../assets/img/mockup-escritorio.webp" alt="Panel de ZYRA en un ordenador de escritorio" loading="lazy" width="1100" height="909"></figure>
+  <a class="alink" href="../servicios/software-a-medida/index.html" data-i18n="t180">Saber más</a>
+</article><article class="scard">
+  <span class="card__n mono">03</span>
+  <h3 data-i18n="t181">Automatización</h3>
+  <p data-i18n="t182">Conectamos tus herramientas entre sí y automatizamos las tareas repetitivas del día a día.</p>
+  <figure class="scard__media"><img decoding="async" src="../assets/img/mockup-portatil-movil.webp" alt="Flujos de ZYRA en portátil y móvil" loading="lazy" width="1100" height="710"></figure>
+  <a class="alink" href="../servicios/automatizacion/index.html" data-i18n="t183">Saber más</a>
+</article><article class="scard">
+  <span class="card__n mono">04</span>
+  <h3 data-i18n="t184">Agentes de IA</h3>
+  <p data-i18n="t185">Chatbots y agentes de IA para atención, consultas, reservas y derivación, incluidos agentes de voz.</p>
+  <figure class="scard__media"><img decoding="async" src="../assets/img/mockup-movil.webp" alt="" loading="lazy" width="560" height="1074"></figure>
+  <a class="alink" href="../servicios/agentes-de-ia/index.html" data-i18n="t186">Saber más</a>
+</article></div></section>
+<section class="pricing">
+  <header class="shead"><p class="kicker" data-i18n="t210">Por dónde empezar</p><h2 class="h-section" data-i18n="t211">Puntos de partida habituales.</h2><p class="shead__lead" data-i18n="t212">Ajustamos el alcance a cada negocio y cerramos el precio contigo por WhatsApp.</p></header>
+  <ul class="rates"><li class="rate" data-rate><h3 data-i18n="t187">Web Esencial</h3><p data-i18n="t188">Una web profesional y rápida para dar el salto online, con las páginas clave de tu negocio.</p><a class="alink" href="../servicios/desarrollo-web/index.html" data-i18n="t189">Solicitar información</a></li><li class="rate" data-rate><h3 data-i18n="t190">Web + Mantenimiento</h3><p data-i18n="t191">Tu web siempre actualizada, con copias de seguridad, revisiones y soporte continuo.</p><a class="alink" href="../servicios/desarrollo-web/index.html" data-i18n="t192">Solicitar información</a></li><li class="rate" data-rate><h3 data-i18n="t193">Web Avanzada</h3><p data-i18n="t194">Funcionalidades a medida — reservas, catálogos, áreas privadas — para necesidades específicas.</p><a class="alink" href="../servicios/desarrollo-web/index.html" data-i18n="t195">Solicitar información</a></li><li class="rate" data-rate><h3 data-i18n="t196">Agentes de IA</h3><p data-i18n="t197">Chatbots y agentes que atienden consultas, informan y gestionan reservas de forma autónoma.</p><a class="alink" href="../servicios/agentes-de-ia/index.html" data-i18n="t198">Solicitar información</a></li><li class="rate" data-rate><h3 data-i18n="t199">Software a medida</h3><p data-i18n="t200">Aplicaciones internas para gestionar tu operación: clientes, pedidos, inventario o equipo.</p><a class="alink" href="../servicios/software-a-medida/index.html" data-i18n="t201">Solicitar información</a></li><li class="rate" data-rate><h3 data-i18n="t202">Automatización + IA</h3><p data-i18n="t203">Conectamos tus herramientas y automatizamos procesos repetitivos de principio a fin.</p><a class="alink" href="../servicios/automatizacion/index.html" data-i18n="t204">Solicitar información</a></li></ul>
+</section>
+<section class="band">
+  <div class="band__glow" aria-hidden="true"></div>
+  <h2 class="h-display" data-i18n="t213">¿No sabes cuál<br>encaja mejor?</h2>
+  <p data-i18n="t214">Cuéntanos qué te está costando tiempo o dinero y te decimos por dónde empezaríamos nosotros.</p>
+  <div class="band__cta">
+    <a class="btn btn--light" href="../contacto/index.html" data-magnet data-i18n="t215">Cuéntanos tu proyecto</a>
+    <a class="btn btn--ghost" href="https://wa.me/34643412454" data-magnet data-i18n="t216">WhatsApp directo</a>
+  </div>
+</section>
+</main><footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a class="footer__mark" href="../index.html" aria-label="ZYRA">
+        <img decoding="async" src="../assets/img/zyra-simbolo.webp" alt="" width="36" height="34"><span>ZYRA</span>
+      </a>
+      <p data-i18n="t226">Diseñamos webs, desarrollamos software y creamos soluciones de automatización e IA para empresas que quieren crecer.</p>
+    </div>
+    <nav class="footer__links" aria-label="Enlaces"><a href="../servicios/desarrollo-web/index.html" data-i18n="t217">Desarrollo web</a><a href="../servicios/automatizacion/index.html" data-i18n="t218">Automatización</a><a href="../servicios/agentes-de-ia/index.html" data-i18n="t219">Agentes de IA</a><a href="../sobre-nosotros/index.html" data-i18n="t220">Sobre nosotros</a><a href="../servicios/index.html" data-i18n="t221">Servicios</a><a href="../contacto/index.html" data-i18n="t222">Contacto</a></nav>
+    <div class="footer__social">
+      <p class="footer__label" data-i18n="t227">Redes sociales</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.4 3.5v10.9a3.6 3.6 0 1 1-3.1-3.57"/><path d="M14.4 3.5c.5 2.4 2 3.9 4.5 4.2"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.6" y="5.4" width="18.8" height="13.2" rx="4.2"/><path d="M10.4 9.5l4.6 2.5-4.6 2.5z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__legal"><a href="../legal/aviso-legal/index.html" data-i18n="t223">Aviso legal</a><a href="../legal/privacidad/index.html" data-i18n="t224">Privacidad</a><a href="../legal/cookies/index.html" data-i18n="t225">Cookies</a></span></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/cookies.js?v=27"></script>
+<script src="../assets/js/i18n.js?v=27"></script>
+<script src="../assets/js/zyra.js?v=27"></script>
+<script src="../assets/js/resenas.js?v=27"></script>
+</body>
+</html>

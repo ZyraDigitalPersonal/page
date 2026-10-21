@@ -1,0 +1,124 @@
+# ══════════════════════════════════════════════════════════════
+#  ZYRA · configuración, idiomas y seguridad (Apache / LiteSpeed · Hostinger)
+# ══════════════════════════════════════════════════════════════
+
+ErrorDocument 404 /404.html
+DirectoryIndex index.html index.php
+AddDefaultCharset UTF-8
+AddType application/manifest+json .webmanifest
+AddType image/webp .webp
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ── 1. Un solo dominio canónico: https://digitalzyra.com ──
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ── 2. Prefijo de idioma siempre en minúsculas (/ES-es/ → /es-es/) ──
+  RewriteCond %{REQUEST_URI} !^/(es-es|en-en|ar-ar)(/|$)
+  RewriteRule ^es-es(/.*)?$ /es-es$1 [NC,L,R=301]
+  RewriteCond %{REQUEST_URI} !^/(es-es|en-en|ar-ar)(/|$)
+  RewriteRule ^en-en(/.*)?$ /en-en$1 [NC,L,R=301]
+  RewriteCond %{REQUEST_URI} !^/(es-es|en-en|ar-ar)(/|$)
+  RewriteRule ^ar-ar(/.*)?$ /ar-ar$1 [NC,L,R=301]
+  # Formas cortas que la gente escribe a mano
+  RewriteRule ^(es|en|ar)/?$ /$1-$1/ [NC,L,R=301]
+
+  # ── 3. URLs limpias: nada de index.html a la vista ──
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [NC,L,R=301]
+  # Carpeta sin barra final → con barra
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^((es-es|en-en|ar-ar)/.*[^/])$ /$1/ [L,R=301]
+
+  # ── 4. Direcciones antiguas (antes de los idiomas) → versión en español ──
+  RewriteRule ^servicios/?$                       /es-es/servicios/ [L,R=301]
+  RewriteRule ^servicios/(desarrollo-web|software-a-medida|automatizacion|agentes-de-ia)/?$ /es-es/servicios/$1/ [L,R=301]
+  RewriteRule ^como-trabajamos/?$                 /es-es/como-trabajamos/ [L,R=301]
+  RewriteRule ^sobre-nosotros/?$                  /es-es/sobre-nosotros/ [L,R=301]
+  RewriteRule ^contacto/?$                        /es-es/contacto/ [L,R=301]
+  RewriteRule ^legal/(aviso-legal|privacidad|cookies)/?$ /es-es/legal/$1/ [L,R=301]
+  RewriteRule ^(precios|portfolio|blog|preview)(/.*)?$ /es-es/ [L,R=301]
+
+  # ── 5. La raíz lleva a cada persona a su idioma ──
+  #  1º la elección guardada (cookie zyra_lang), 2º el idioma del navegador.
+  #  Es una redirección temporal (302): Google rastrea sin idioma y entra en /es-es/.
+  RewriteCond %{HTTP_COOKIE} (^|;\s*)zyra_lang=(es|en|ar)(;|$)
+  RewriteRule ^$ /%2-%2/ [L,R=302,E=LANGREDIR:1]
+  RewriteCond %{HTTP:Accept-Language} ^ar [NC]
+  RewriteRule ^$ /ar-ar/ [L,R=302,E=LANGREDIR:1]
+  RewriteCond %{HTTP:Accept-Language} ^(es|ca|gl|eu) [NC]
+  RewriteRule ^$ /es-es/ [L,R=302,E=LANGREDIR:1]
+  RewriteCond %{HTTP:Accept-Language} ^[a-z] [NC]
+  RewriteRule ^$ /en-en/ [L,R=302,E=LANGREDIR:1]
+  RewriteRule ^$ /es-es/ [L,R=302,E=LANGREDIR:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Vary "Accept-Language, Cookie" env=LANGREDIR
+</IfModule>
+
+# ── 6. Nada de listar carpetas ni de firmar el servidor ───────
+Options -Indexes
+ServerSignature Off
+
+# ── 7. Archivos que nadie debe poder descargar ────────────────
+<FilesMatch "(^\.|\.(md|json|log|bak|old|sql|zip|ini|yml|yaml|py)$)">
+  Require all denied
+</FilesMatch>
+<Files ".htaccess">
+  Require all denied
+</Files>
+
+# ── 8. Cabeceras de seguridad ─────────────────────────────────
+<IfModule mod_headers.c>
+  # CSP: solo JavaScript propio, jsDelivr (GSAP y Lenis), Google (botón de reseñas)
+  # y Google Ads (gtag.js, solo se carga si se acepta Marketing en el banner de cookies).
+  # Fuentes de Fontshare y Google Fonts (incluidas las árabes).
+Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' https://cdn.jsdelivr.net https://accounts.google.com https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net https://pagead2.googlesyndication.com; style-src 'self' 'unsafe-inline' https://api.fontshare.com https://fonts.googleapis.com https://accounts.google.com; font-src 'self' https://cdn.fontshare.com https://fonts.gstatic.com; img-src 'self' data: https://digitalzyra.es https://lh3.googleusercontent.com https://*.gstatic.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.es https://pagead2.googlesyndication.com; media-src 'self'; connect-src 'self' https://accounts.google.com https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.es https://pagead2.googlesyndication.com https://cdn.jsdelivr.net; frame-src https://accounts.google.com https://td.doubleclick.net https://bid.g.doubleclick.net https://www.googletagmanager.com; manifest-src 'self'; upgrade-insecure-requests"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  Header always set Cross-Origin-Resource-Policy "same-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  # ── Caché ──
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico|mp4|woff2)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(xml|txt|webmanifest)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+
+  # El panel de reseñas y la API no se indexan
+  <FilesMatch "\.php$">
+    Header set X-Robots-Tag "noindex, nofollow"
+  </FilesMatch>
+</IfModule>
+
+# ── 9. Compresión ─────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json application/xml application/manifest+json image/svg+xml image/x-icon
+</IfModule>
+
+# ── 10. PHP: solo en /api/ y /admin/ ─────────────────────────
+<FilesMatch "\.(php5|phtml|cgi|pl|py|sh)$">
+  Require all denied
+</FilesMatch>
+
+# ── 11. Datos y configuración nunca se sirven ────────────────
+RedirectMatch 404 ^/data(/|$)
+RedirectMatch 404 ^/api/(config|lib|emails|mailer)\.php$

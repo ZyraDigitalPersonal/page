@@ -1,0 +1,3 @@
+/* Solo se carga si el navegador tiene JavaScript desactivado */
+.curtain{display:none}
+.quiz{display:none}

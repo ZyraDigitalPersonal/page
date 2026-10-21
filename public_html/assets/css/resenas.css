@@ -1,0 +1,122 @@
+/* ════════════════════════════════════════════════════════════
+   ZYRA — Opiniones de clientes
+   Va en su propio archivo a propósito: al ser una ruta nueva,
+   ninguna caché puede servir una versión antigua de estos
+   estilos. Usa las mismas variables que zyra.css.
+   ════════════════════════════════════════════════════════════ */
+
+.reviews{padding:var(--sec) var(--pad)}
+.reviews__head{margin-bottom:clamp(26px,4vh,40px)}
+.reviews__bar{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  padding-bottom:clamp(26px,4vh,38px);border-bottom:1px solid var(--line);
+  margin-bottom:clamp(30px,4vh,48px);
+}
+.reviews__cta{flex:0 0 auto}
+
+/* Nota media */
+.rscore{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rscore__num{font-family:var(--display);font-size:clamp(2.2rem,4.4vw,3.2rem);line-height:1;letter-spacing:-.03em}
+.rscore__stars{display:inline-flex;gap:3px}
+.rscore__n{color:var(--muted);font-size:.92rem}
+
+/* Estrella compartida por la nota, las fichas y el formulario */
+.star{width:17px;height:17px;flex:0 0 auto;fill:var(--soft-2);transition:fill .3s ease}
+.star.is-on{fill:var(--amber)}
+
+/* Fichas */
+.reviews__list{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:clamp(16px,2vw,22px)}
+.review{
+  position:relative;display:flex;flex-direction:column;gap:14px;
+  padding:clamp(20px,2.4vw,28px);border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(160deg,var(--panel-a),var(--panel-b));
+  transition:border-color .45s ease,transform .45s var(--ease);
+}
+.review:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.review__top{display:flex;align-items:flex-start;gap:13px}
+.review__ava{
+  width:52px;height:52px;border-radius:99px;object-fit:cover;flex:0 0 auto;
+  border:1.5px solid var(--line-2);
+}
+.review__ava--ini{
+  display:grid;place-items:center;background:var(--soft-2);
+  font-family:var(--display);font-size:1.05rem;letter-spacing:.02em;color:var(--text);
+}
+.review__who{min-width:0}
+.review__name{font-weight:500;font-size:1.02rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.review__meta{color:var(--muted);font-size:.8rem;margin-top:2px}
+.review__g{margin-left:auto;margin-top:3px;flex:0 0 auto;display:grid;place-items:center;width:26px;height:26px;border-radius:99px;border:1px solid var(--line);background:var(--soft)}
+.gmark{width:14px;height:14px}
+.review__stars{display:flex;gap:3px}
+.review__text{color:var(--muted);font-size:.97rem;line-height:1.62;white-space:pre-line}
+.review__date{margin-top:auto;padding-top:6px;color:var(--muted);opacity:.7;font-family:var(--mono);font-size:.7rem;letter-spacing:.02em}
+.reviews__empty{
+  color:var(--muted);font-size:.99rem;max-width:58ch;
+  padding:clamp(22px,3vw,32px);border:1px dashed var(--line-2);border-radius:18px;
+}
+.reviews__more{background:none;border:0;cursor:pointer;padding:0;margin-top:26px}
+
+/* ── Ventana para escribir la reseña ───────────────────────── */
+.rvmodal{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:clamp(12px,3vw,32px)}
+.rvmodal__scrim{position:absolute;inset:0;background:var(--scrim);backdrop-filter:blur(8px)}
+.rvmodal__panel{
+  position:relative;width:min(620px,100%);max-height:92vh;overflow:auto;
+  padding:clamp(24px,3.4vw,40px);border:1px solid var(--line-2);border-radius:26px;
+  background:linear-gradient(160deg,var(--panel-a),var(--panel-b));
+  box-shadow:0 40px 90px -50px rgba(0,0,0,.9);
+}
+.rvmodal__panel h3{font-size:clamp(1.5rem,3.2vw,2.1rem);margin-bottom:10px}
+.rvmodal__intro{color:var(--muted);font-size:.94rem;margin-bottom:22px;max-width:46ch}
+.rvmodal__x{
+  position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:99px;
+  display:grid;place-items:center;border:1px solid var(--line);background:var(--soft);
+  cursor:pointer;transition:border-color .3s ease,transform .4s var(--ease);
+}
+.rvmodal__x:hover{border-color:var(--violet-lit);transform:rotate(90deg)}
+.rvmodal__x svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+
+.rvform{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:6px}
+.rvform .field--full,.rvform fieldset,.rvform .rvauth,.rvform .form__done,
+.rvform .rvform__err,.rvform .form__warn{grid-column:1/-1}
+.rvform__err{color:#F87171;font-size:.9rem;grid-column:1/-1}
+
+/* Estrellas del formulario */
+.rvstars{border:0;padding:0;margin:0}
+.rvstars legend{font-size:.8rem;letter-spacing:.04em;color:var(--muted);padding:0;margin-bottom:10px}
+.rvstars__row{display:flex;gap:8px}
+.rvstar{position:relative;cursor:pointer;display:grid;place-items:center;padding:8px;border-radius:12px;transition:background .3s ease}
+.rvstar input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.rvstar .star{width:30px;height:30px;fill:var(--line-2)}
+.rvstar em{position:absolute;opacity:0}
+.rvstar:hover{background:var(--soft)}
+.rvstar.is-on .star,.rvstar.is-hot .star{fill:var(--amber)}
+.rvstar input:focus-visible + span{outline:2px solid var(--violet-lit);outline-offset:3px;border-radius:6px}
+
+/* Entrar con Google */
+.rvauth__hint{color:var(--muted);font-size:.88rem;margin-bottom:12px;max-width:44ch}
+.rvauth__btn{min-height:44px;color-scheme:light}
+.rvuser{
+  display:flex;align-items:center;gap:14px;padding:14px 16px;
+  border:1px solid var(--line-2);border-radius:16px;background:var(--soft);
+}
+.rvuser__ava{width:46px;height:46px;border-radius:99px;object-fit:cover;flex:0 0 auto}
+.rvuser__name{font-weight:500}
+.rvuser__meta{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:.8rem;margin-top:2px}
+.rvuser__out{
+  margin-left:auto;background:none;border:0;cursor:pointer;color:var(--muted);
+  font-size:.82rem;border-bottom:1px solid var(--line-2);padding:0 0 2px;
+}
+.rvuser__out:hover{color:var(--text)}
+
+@media (max-width:620px){
+  .rvform{grid-template-columns:1fr}
+  .reviews__bar{align-items:flex-start}
+  .rvstar .star{width:34px;height:34px}
+}
+
+/* Tema claro */
+[data-theme="light"] .review{box-shadow:0 20px 40px -34px rgba(11,13,18,.5)}
+[data-theme="light"] .rvmodal__panel{box-shadow:0 40px 80px -46px rgba(11,13,18,.45)}
+[data-theme="light"] .star{fill:rgba(11,13,18,.13)}
+[data-theme="light"] .star.is-on{fill:#E6A700}
+.rvform .check a{color:var(--violet-lit);border-bottom:1px solid currentColor}

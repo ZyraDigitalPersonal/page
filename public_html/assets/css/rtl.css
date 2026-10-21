@@ -1,0 +1,92 @@
+/* ============================================================
+   ZYRA — árabe (derecha a izquierda)
+   Se carga solo en /ar-ar/. Mantiene el diseño y cambia lo
+   que depende de la dirección de lectura y de la tipografía.
+   ============================================================ */
+
+/* Tipografía: Geist no tiene glifos árabes */
+:root{
+  --display:"Noto Kufi Arabic","Geist",system-ui,sans-serif;
+  --sans:"IBM Plex Sans Arabic","Geist",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+}
+/* El espaciado entre letras rompe la unión de la escritura árabe */
+[dir="rtl"] body *:not(code){letter-spacing:0 !important}
+[dir="rtl"] body{line-height:1.8}
+[dir="rtl"] h1,[dir="rtl"] h2,[dir="rtl"] h3,[dir="rtl"] h4{line-height:1.3}
+[dir="rtl"] .h-display,[dir="rtl"] .hero__title{line-height:1.25}
+[dir="rtl"] .line{padding-bottom:.18em}
+[dir="rtl"] .hero__title .line{padding-right:0;padding-left:.06em}
+/* La marca, el correo, el teléfono y los códigos siguen en latino y de izquierda a derecha */
+[dir="rtl"] .nav__brand,[dir="rtl"] .footer__mark,[dir="rtl"] .curtain__word,
+[dir="rtl"] a[href^="mailto:"],[dir="rtl"] a[href^="tel:"],[dir="rtl"] .icon-btn--lang,
+[dir="rtl"] input[type="email"],[dir="rtl"] input[type="tel"]{direction:ltr;unicode-bidi:isolate}
+[dir="rtl"] .nav__brand{flex-direction:row}
+
+/* Alineaciones */
+[dir="rtl"] .band,[dir="rtl"] .menu__toggle,[dir="rtl"] .lang__drop a,
+[dir="rtl"] .opt,[dir="rtl"] .qa summary{text-align:right}
+[dir="rtl"] .skip{left:auto;right:12px;transform:translateY(-300%)}
+[dir="rtl"] .skip:focus{transform:none}
+/* Nada puede provocar desplazamiento lateral */
+html[dir="rtl"],[dir="rtl"] body{overflow-x:clip}
+/* Luces decorativas en espejo */
+[dir="rtl"] .contact__glow{right:auto;left:-10%}
+[dir="rtl"] .hero__glow,[dir="rtl"] .quiz__glow{left:auto;right:-8%}
+[dir="rtl"] .band__glow{left:auto;right:30%}
+
+/* Viñetas y líneas que iban a la izquierda */
+[dir="rtl"] .service__list li,[dir="rtl"] .quiz__notes li{padding-left:0;padding-right:18px}
+[dir="rtl"] .service__list li::before,[dir="rtl"] .quiz__notes li::before{left:auto;right:0}
+[dir="rtl"] .ticks li{padding-left:0;padding-right:28px}
+[dir="rtl"] .ticks li::before{left:auto;right:0}
+[dir="rtl"] .steps{padding-left:0;padding-right:clamp(28px,4vw,54px)}
+[dir="rtl"] .steps__line{left:auto;right:0}
+[dir="rtl"] .step::before{left:auto;right:calc(-1 * clamp(28px,4vw,54px) - 4px)}
+[dir="rtl"] .form__warn{border-left:0;border-right:2px solid var(--amber);border-radius:8px 0 0 8px}
+[dir="rtl"] .pending__body .mono{margin-left:0;margin-right:6px}
+[dir="rtl"] .ck__cat p{padding-left:0;padding-right:60px}
+[dir="rtl"] .ck__name em{margin-left:0;margin-right:8px}
+[dir="rtl"] .ck__link{margin-right:0;margin-left:16px}
+[dir="rtl"] .opt{padding-right:17px;padding-left:42px}
+[dir="rtl"] .opt::after{right:auto;left:15px}
+[dir="rtl"] .burger__lines i:last-child{margin-left:0;margin-right:auto}
+
+/* Movimiento al pasar el cursor: hacia la izquierda */
+[dir="rtl"] .menu__nav a:hover span{transform:translateX(-18px)}
+[dir="rtl"] .menu__item:hover .mlabel{transform:translateX(-14px)}
+[dir="rtl"] .menu__drop a:hover{transform:translateX(-10px)}
+[dir="rtl"] .menu__sub a:hover{transform:translateX(-8px)}
+[dir="rtl"] .bot__send:hover{transform:translateX(-2px) scale(1.05)}
+[dir="rtl"] .nav__inline a::after,[dir="rtl"] .contact__direct a::after{transform-origin:left}
+[dir="rtl"] .nav__inline a:hover::after,[dir="rtl"] .contact__direct a:hover::after{transform-origin:right}
+[dir="rtl"] .marquee__track{animation-direction:reverse}
+
+/* Flechas que apuntan hacia delante */
+[dir="rtl"] .bot__send svg,[dir="rtl"] .card__arrow,[dir="rtl"] .scard__arrow,
+[dir="rtl"] .service__more svg,[dir="rtl"] .btn svg{transform:scaleX(-1)}
+
+/* Elementos flotantes: el asistente pasa a la izquierda y WhatsApp a la derecha */
+[dir="rtl"] .bot{right:auto;left:clamp(16px,3vw,34px);justify-items:start}
+[dir="rtl"] .bot__panel{transform-origin:bottom left}
+[dir="rtl"] .wa-fab{left:auto;right:clamp(16px,3vw,34px)}
+[dir="rtl"] .wa-fab__tip{left:auto;right:calc(100% + 12px)}
+[dir="rtl"] .ck__banner{left:auto;right:clamp(16px,3vw,34px)}
+[dir="rtl"] .lang__drop{right:auto;left:0}
+
+/* Burbujas del chat */
+[dir="rtl"] .msg--bot{border-bottom-left-radius:18px;border-bottom-right-radius:6px}
+[dir="rtl"] .msg--me{border-bottom-right-radius:18px;border-bottom-left-radius:6px}
+
+/* El conmutador de formularios se anima con posiciones absolutas: se mantiene en LTR */
+[dir="rtl"] .forms__switch{direction:ltr}
+[dir="rtl"] .forms__switch button{direction:rtl}
+
+/* Mockups: la inclinación se refleja */
+[dir="rtl"] .showcase{margin-right:0;margin-left:calc(var(--pad) * -1.1)}
+@media (max-width:1100px){[dir="rtl"] .showcase{margin-left:0}}
+
+/* Reseñas y formulario de reseñas */
+[dir="rtl"] .rv-modal,[dir="rtl"] .rcard{text-align:right}
+
+/* Degradados sin recortes en árabe */
+[dir="rtl"] .h-display,[dir="rtl"] .phero__title{padding-bottom:.2em}
