@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-ES">
+  <title>Guías de ZYRA</title>
+  <subtitle>Guías prácticas de web, automatización e inteligencia artificial para negocios pequeños.</subtitle>
+  <link href="https://digitalzyra.com/es-es/guias/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://digitalzyra.com/es-es/guias/" rel="alternate" type="text/html"/>
+  <id>https://digitalzyra.com/es-es/guias/</id>
+  <updated>2026-10-21T09:00:00+01:00</updated>
+  <author><name>Equipo de ZYRA</name><uri>https://digitalzyra.com/es-es/sobre-nosotros/</uri></author>
+  <icon>https://digitalzyra.com/assets/img/icon-192.png</icon>
+  <entry>
+    <title>WhatsApp Business para negocios: app, API y qué necesitas para un chatbot</title>
+    <link href="https://digitalzyra.com/es-es/guias/whatsapp-business-api-chatbot/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/whatsapp-business-api-chatbot/</id>
+    <published>2026-10-21T09:00:00+01:00</published>
+    <updated>2026-10-21T09:00:00+01:00</updated>
+    <category term="Inteligencia artificial"/>
+    <summary>App de WhatsApp Business o API oficial: qué hace falta para conectar un chatbot, la ventana de 24 horas, las plantillas y las normas de Meta.</summary>
+  </entry>
+  <entry>
+    <title>Una web que funciona sin conexión: lo que aprendimos haciendo ZyraBus</title>
+    <link href="https://digitalzyra.com/es-es/guias/app-sin-conexion-pwa/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/app-sin-conexion-pwa/</id>
+    <published>2026-10-21T09:00:00+01:00</published>
+    <updated>2026-10-21T09:00:00+01:00</updated>
+    <category term="Web"/>
+    <summary>Qué es una aplicación web progresiva (PWA), cuándo compensa frente a una app de tienda y cómo hacer que funcione sin cobertura, según ZyraBus.</summary>
+  </entry>
+  <entry>
+    <title>Tutorial: del formulario de tu web a Google Sheets y un aviso al equipo, con Make</title>
+    <link href="https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/</id>
+    <published>2026-10-21T09:00:00+01:00</published>
+    <updated>2026-10-21T09:00:00+01:00</updated>
+    <category term="Automatización"/>
+    <summary>Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Con el código para el servidor.</summary>
+  </entry>
+  <entry>
+    <title>Make, Zapier o n8n: cómo elegir herramienta para automatizar</title>
+    <link href="https://digitalzyra.com/es-es/guias/make-zapier-n8n-cual-elegir/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/make-zapier-n8n-cual-elegir/</id>
+    <published>2026-10-21T09:00:00+01:00</published>
+    <updated>2026-10-21T09:00:00+01:00</updated>
+    <category term="Automatización"/>
+    <summary>Make, Zapier y n8n comparados con criterios claros: facilidad, lógica, coste por uso, dónde se guardan los datos y mantenimiento. Con un caso resuelto.</summary>
+  </entry>
+  <entry>
+    <title>Llamadas perdidas en un negocio local: qué puede atender un agente de voz y qué no</title>
+    <link href="https://digitalzyra.com/es-es/guias/agente-voz-llamadas-perdidas/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/agente-voz-llamadas-perdidas/</id>
+    <published>2026-10-21T09:00:00+01:00</published>
+    <updated>2026-10-21T09:00:00+01:00</updated>
+    <category term="Inteligencia artificial"/>
+    <summary>Cómo funciona un agente de voz con IA, qué llamadas puede atender en una clínica, taller o restaurante, cuáles deben pasar a una persona y qué exige la ley.</summary>
+  </entry>
+  <entry>
+    <title>Qué tiene que llevar por ley la web de un negocio en España</title>
+    <link href="https://digitalzyra.com/es-es/guias/requisitos-legales-web/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/requisitos-legales-web/</id>
+    <published>2026-10-08T09:00:00+01:00</published>
+    <updated>2026-10-08T09:00:00+01:00</updated>
+    <category term="Legal"/>
+    <summary>Aviso legal, política de privacidad y cookies explicados para negocios pequeños: qué piden la LSSI, el RGPD y la AEPD, con lista de comprobación.</summary>
+  </entry>
+  <entry>
+    <title>Qué tareas de tu negocio merece la pena automatizar</title>
+    <link href="https://digitalzyra.com/es-es/guias/que-automatizar-en-un-negocio/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/que-automatizar-en-un-negocio/</id>
+    <published>2026-10-08T09:00:00+01:00</published>
+    <updated>2026-10-08T09:00:00+01:00</updated>
+    <category term="Automatización"/>
+    <summary>Cómo elegir qué tareas automatizar, ejemplos reales por sector y una calculadora para saber cuántas horas recuperas y cuándo se amortiza.</summary>
+  </entry>
+  <entry>
+    <title>La web de un negocio local: 25 comprobaciones antes de publicarla</title>
+    <link href="https://digitalzyra.com/es-es/guias/checklist-web-negocio-local/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/checklist-web-negocio-local/</id>
+    <published>2026-10-08T09:00:00+01:00</published>
+    <updated>2026-10-08T09:00:00+01:00</updated>
+    <category term="Web"/>
+    <summary>25 comprobaciones para la web de una peluquería, clínica o restaurante: contacto, confianza, velocidad en móvil, Google y legal. Con lista interactiva.</summary>
+  </entry>
+  <entry>
+    <title>Cómo pedir presupuesto de una web sin sorpresas</title>
+    <link href="https://digitalzyra.com/es-es/guias/presupuesto-web-que-preguntar/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/presupuesto-web-que-preguntar/</id>
+    <published>2026-10-08T09:00:00+01:00</published>
+    <updated>2026-10-08T09:00:00+01:00</updated>
+    <category term="Web"/>
+    <summary>Las 12 preguntas que conviene hacer antes de contratar una web: entregables, propiedad del dominio, mantenimiento, SEO y legal. Para comparar ofertas.</summary>
+  </entry>
+  <entry>
+    <title>Chatbot o agente de IA para atender clientes: qué puede hacer y qué no</title>
+    <link href="https://digitalzyra.com/es-es/guias/chatbot-agente-ia-atencion-cliente/" rel="alternate" type="text/html"/>
+    <id>https://digitalzyra.com/es-es/guias/chatbot-agente-ia-atencion-cliente/</id>
+    <published>2026-10-08T09:00:00+01:00</published>
+    <updated>2026-10-08T09:00:00+01:00</updated>
+    <category term="Inteligencia artificial"/>
+    <summary>Diferencia entre chatbot y agente de IA, qué preparar antes, cómo probarlo y qué exige el Reglamento europeo de IA desde agosto de 2026.</summary>
+  </entry>
+</feed>

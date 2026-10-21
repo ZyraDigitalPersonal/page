@@ -1,0 +1,5 @@
+/* Geist y Geist Mono alojadas en el propio servidor (licencia SIL OFL 1.1,
+   ver assets/fonts/OFL-Geist.txt). Recortadas a alfabeto latino.
+   Rutas relativas a build/ltr/zyra.css y build/rtl/zyra.css. */
+@font-face{font-family:"Geist";src:url("../../../fonts/geist-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("../../../fonts/geist-mono-variable.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}

@@ -30,21 +30,15 @@
 <link href="../../assets/img/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="../../site.webmanifest" rel="manifest"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/css/zyra.css?v=48" rel="stylesheet"/>
-<link href="../../assets/css/resenas.css?v=48" rel="stylesheet"/>
-<link href="../../assets/css/zyra-fx.css?v=48" rel="stylesheet"/>
-<script src="../../assets/js/boot.js?v=48"></script>
-<script src="../../assets/js/gtag.js?v=48"></script>
+<link as="font" crossorigin="" href="../../assets/fonts/geist-variable.woff2" rel="preload" type="font/woff2"/>
+<link href="../../assets/css/build/ltr/zyra.css?v=51" rel="stylesheet"/>
+<script src="../../assets/js/boot.js?v=51"></script>
+<script defer="" src="../../assets/js/gtag.js?v=51"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://digitalzyra.com/#organization", "name": "ZYRA", "alternateName": "ZYRA Digital", "url": "https://digitalzyra.com/", "logo": {"@type": "ImageObject", "url": "https://digitalzyra.com/assets/img/icon-512.png", "width": 512, "height": 512}, "image": "https://digitalzyra.com/assets/img/og-zyra.jpg", "email": "zyradigitalpersonal@gmail.com", "telephone": "+34643412454", "areaServed": [{"@type": "Country", "name": "España"}, "Worldwide"], "knowsLanguage": ["es", "en", "ar"], "founder": [{"@type": "Person", "name": "Kilian Abraham Barreto Mendoza"}, {"@type": "Person", "name": "Ahmednah Mohamed Saleh"}, {"@type": "Person", "name": "Iker Alonso Armas"}], "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "email": "zyradigitalpersonal@gmail.com", "telephone": "+34643412454", "availableLanguage": ["Spanish", "English", "Arabic"], "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}}], "sameAs": ["https://www.instagram.com/zyra_personal?stkn=cDV1cXg5bzhrcXl6&utm_source=qr", "https://www.tiktok.com/@digitalzyra?_r=1&_t=ZN-99xErccwQJ4", "https://www.linkedin.com/in/digital-zyra-730293439"]}, {"@type": "WebSite", "@id": "https://digitalzyra.com/#website", "url": "https://digitalzyra.com/", "name": "ZYRA", "publisher": {"@id": "https://digitalzyra.com/#organization"}, "inLanguage": ["es-ES", "en", "ar"]}, {"@type": "BreadcrumbList", "@id": "https://digitalzyra.com/en-en/projects/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://digitalzyra.com/en-en/"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://digitalzyra.com/en-en/projects/"}]}, {"@type": "WebPage", "@id": "https://digitalzyra.com/en-en/projects/#webpage", "url": "https://digitalzyra.com/en-en/projects/", "name": "Projects: ZyraBus, a Tenerife bus app | ZYRA", "description": "Real case: ZyraBus, the free bus and tram timetable app for Tenerife we designed and built. The problem, technical decisions and limits.", "inLanguage": "en", "isPartOf": {"@id": "https://digitalzyra.com/#website"}, "about": {"@id": "https://digitalzyra.com/#organization"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://digitalzyra.com/assets/img/og-zyra.jpg"}, "datePublished": "2026-10-08", "dateModified": "2026-10-08", "breadcrumb": {"@id": "https://digitalzyra.com/en-en/projects/#breadcrumb"}}, {"@type": "SoftwareApplication", "@id": "https://digitalzyra.es/#app", "name": "ZyraBus", "url": "https://digitalzyra.es/", "applicationCategory": "TravelApplication", "operatingSystem": "Android, iOS (aplicación web instalable)", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "creator": {"@id": "https://digitalzyra.com/#organization"}, "screenshot": ["https://digitalzyra.es/img/app/home.webp?v=2", "https://digitalzyra.es/img/app/plan.webp?v=2", "https://digitalzyra.es/img/app/remind.webp?v=2", "https://digitalzyra.es/img/app/chat.webp?v=2"]}]}</script>
 </head>
 <body data-lang="en" data-page="projects">
-<noscript><link href="../../assets/css/nojs.css?v=48" rel="stylesheet"/></noscript>
+<noscript><link href="../../assets/css/nojs.css?v=51" rel="stylesheet"/></noscript>
 
-<canvas aria-hidden="true" class="spark" id="spark"></canvas>
 <a class="skip" href="#main">Skip to content</a>
 <header class="nav" id="nav">
 <a aria-label="ZYRA" class="nav__brand" href="../../en-en/">
@@ -109,7 +103,7 @@
 <h2 class="h-section">ZyraBus: catch the bus, <em>no surprises.</em></h2>
 <p class="lead">A free app to check bus and tram timetables in Tenerife, plan combined journeys and get alerts telling you when to leave home and when to get off. It is our own product: we designed, built and published it ourselves.</p>
 <div class="case__cta">
-<a class="btn btn--light" data-magnet="" href="https://digitalzyra.es/" rel="noopener" target="_blank">See ZyraBus at digitalzyra.es</a>
+<a class="btn btn--light" href="https://digitalzyra.es/" rel="noopener" target="_blank">See ZyraBus at digitalzyra.es</a>
 </div>
 </div>
 <dl class="case__facts rv">
@@ -184,7 +178,7 @@
 <div aria-hidden="true" class="band__glow"></div>
 <h2 class="h-display">Got a similar<br/><em>idea?</em></h2>
 <p>Websites, installable apps, custom software or automations. Tell us what you need and we will tell you how we would build it.</p>
-<div class="band__cta"><a class="btn btn--light" data-magnet="" href="../../en-en/contact/">Tell us about your project</a></div>
+<div class="band__cta"><a class="btn btn--light" href="../../en-en/contact/">Tell us about your project</a></div>
 </section>
 </main><a aria-label="Message us on WhatsApp" class="wa-fab" href="https://wa.me/34643412454" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.3 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.2a10.5 10.5 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.5 10.5 0 1 1 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.5 6.5 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.7 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.1-.3-.2-.6-.4Z" fill="currentColor"></path></svg><span class="wa-fab__tip">Message us on WhatsApp</span></a><footer class="footer">
 <div class="footer__grid">
@@ -201,14 +195,10 @@
 </div>
 </div>
 <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__nap">Independent project · Remote team</span><span class="footer__legal"><a href="../../en-en/legal/legal-notice/">Legal notice</a><a href="../../en-en/legal/privacy-policy/">Privacy</a><a href="../../en-en/legal/cookie-policy/">Cookies</a></span></div>
-<div aria-hidden="true" class="zy-wm"><span data-l="Z" style="--i:0">Z</span><span data-l="Y" style="--i:1">Y</span><span data-l="R" style="--i:2">R</span><span data-l="A" style="--i:3">A</span></div>
 </footer>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script defer="" src="../../assets/js/lang.js?v=48"></script><script defer="" src="../../assets/js/cookies.js?v=48"></script>
-<script defer="" src="../../assets/js/zyra.js?v=48"></script>
-<script defer="" src="../../assets/js/zyra-fx.js?v=48"></script>
-<script defer="" src="../../assets/js/resenas.js?v=48"></script>
+<script defer="" src="../../assets/js/lang.js?v=51"></script><script defer="" src="../../assets/js/cookies.js?v=51"></script>
+<script defer="" src="../../assets/js/zyra.js?v=51"></script>
+<script defer="" src="../../assets/js/zyra-fx.js?v=51"></script>
+<script defer="" src="../../assets/js/resenas.js?v=51"></script>
 </body>
 </html>

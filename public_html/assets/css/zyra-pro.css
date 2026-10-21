@@ -1,0 +1,224 @@
+/* ============================================================
+   ZYRA · v49 — capa final de acabado
+   Se carga la última. Sustituye la animación anterior por un
+   movimiento discreto, corrige el diseño en móvil y da estilo a
+   los componentes nuevos (filtro de guías).
+   ============================================================ */
+
+:root{
+  --m-ease:cubic-bezier(.2,.65,.3,1);
+  --m-dur:.6s;
+}
+
+/* ── 1. Nada se mueve solo ─────────────────────────────────
+   Fuera halos que respiran, anillos que giran, brillos, cintas,
+   degradados en movimiento y entradas con desenfoque. Solo se
+   conservan las animaciones que informan de algo (cargando,
+   escribiendo, progreso de lectura). */
+*,*::before,*::after{animation:none !important}
+.btn.is-loading::after{animation:spin .8s linear infinite !important}
+.msg--typing i{animation:blink 1.2s infinite !important}
+.msg--typing i:nth-child(2){animation-delay:.18s !important}
+.msg--typing i:nth-child(3){animation-delay:.36s !important}
+@supports (animation-timeline: scroll()){
+  .readbar i{animation:zy-read linear both !important;animation-timeline:scroll(root) !important}
+}
+.manifesto__text .word,.fx-w{opacity:1 !important;filter:none !important;transform:none !important}
+.fx-logos__track{transform:none !important}
+
+/* ── 2. Movimiento nuevo: corto, una vez y sin desenfoque ── */
+@media (prefers-reduced-motion:no-preference){
+  /* Aparición al entrar en pantalla (zyra-fx.js añade las clases) */
+  .m-ready .m-rv{
+    opacity:0;transform:translate3d(0,14px,0);
+    transition:opacity var(--m-dur) var(--m-ease) var(--m-d,0ms),transform var(--m-dur) var(--m-ease) var(--m-d,0ms);
+  }
+  .m-ready .m-rv.m-in{opacity:1;transform:none}
+
+  /* Cabecera de cada página al cargar */
+  .phero .crumb,.phero .kicker,.article__cat,.phero__title,.article__title,.phero__lead,.article__meta,
+  .hero__title,.hero [data-hero="copy"],.hero [data-hero="cta"]{
+    animation:m-up .7s var(--m-ease) both !important;
+  }
+  .phero__title,.article__title,.hero__title{animation-delay:.06s !important}
+  .phero__lead,.article__meta,.hero [data-hero="copy"]{animation-delay:.14s !important}
+  .hero [data-hero="cta"]{animation-delay:.2s !important}
+
+  /* Desplegables y paneles: aparecen, no saltan */
+  .menu:not([hidden]) .menu__inner{animation:m-fade .3s ease both !important}
+  .lang__drop:not([hidden]),.menu__drop:not([hidden]){animation:m-drop .2s var(--m-ease) both !important}
+  .bot__panel:not([hidden]){animation:m-pop .22s var(--m-ease) both !important}
+  .qa[open] .qa__body{animation:m-fade .3s ease both !important}
+}
+@keyframes m-up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes m-fade{from{opacity:0}to{opacity:1}}
+@keyframes m-drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes m-pop{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+
+/* Hover: respuesta clara y contenida */
+.gcard__link{transition:border-color .25s ease,transform .25s var(--m-ease),box-shadow .25s ease,background-color .25s ease}
+@media (hover:hover){
+  .gcard__link:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:0 22px 44px -32px rgba(0,0,0,.85)}
+  .pillar:hover,.card:hover{translate:0 -2px}
+}
+/* Botones: el relleno aparece con un fundido, sin barrido */
+.btn::before{transform:none !important;opacity:0;transition:opacity .25s ease}
+.btn:hover::before{opacity:1}
+.btn{transition:color .25s ease,border-color .25s ease,background-color .25s ease}
+
+/* ── 3. Botones flotantes más discretos ──────────────────── */
+.hero__cta .btn--light::after,.band__cta .btn--light::after,.lost__cta.btn--light::after,.form__send.btn--light::after{display:none !important}
+.bot__ring{display:none}
+.bot__btn{width:60px;height:60px;box-shadow:0 14px 30px -14px rgba(124,58,237,.9),inset 0 1px 0 rgba(255,255,255,.22)}
+.bot__btn:hover{transform:translateY(-2px)}
+.bot__ico{width:24px;height:24px}
+body:has(.bot.is-open) .wa-fab{opacity:0;pointer-events:none}
+
+/* Tecnologías: rejilla fija en lugar de cinta en movimiento */
+.fx-logos{padding:clamp(48px,8vh,88px) var(--pad)}
+.fx-logos__viewport{-webkit-mask-image:none;mask-image:none;overflow:visible;justify-content:center}
+.fx-logos__track{flex-wrap:wrap;justify-content:center;flex:1 1 auto;max-width:1080px;padding:0;gap:10px}
+.fx-logo{padding:9px 14px 9px 10px;border-radius:12px;font-size:.88rem}
+.fx-logo img{width:22px;height:22px}
+.fx-logo:hover{transform:none}
+.fx-logo:hover img{transform:none}
+
+/* ── 4. Guías: filtro por tema ───────────────────────────── */
+.gfilter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:clamp(18px,3vh,28px)}
+.gfilter__btn{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:99px;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  font:inherit;font-size:.88rem;line-height:1;cursor:pointer;white-space:nowrap;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease;
+}
+.gfilter__btn small{font-size:.74rem;opacity:.65;font-variant-numeric:tabular-nums}
+.gfilter__btn:hover{color:var(--text);border-color:var(--line-2)}
+.gfilter__btn[aria-pressed="true"]{background:var(--text);color:var(--void);border-color:transparent}
+.gfilter__btn:focus-visible{outline:2px solid var(--violet-lit);outline-offset:2px}
+.gcard[hidden]{display:none !important}
+.glist.is-filtered > .gcard--big{grid-column:span 2;grid-row:auto}
+.glist.is-filtered > .gcard--big .gcard__title{font-size:clamp(1.15rem,1.4vw,1.35rem);max-width:none}
+.glist.is-filtered > .gcard--big .gcard__desc{font-size:.93rem}
+
+/* Servicios de la portada: cuadrícula en escritorio, carrusel en móvil */
+@media (min-width:1081px){
+  .services__pin.is-swipe .services__track,.services__track{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,1.6vw,24px);
+    overflow:visible;transform:none !important;padding-bottom:0;
+  }
+  .services__track .service{flex:none;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);padding:clamp(22px,2vw,32px)}
+  .services__track .service__name{font-size:clamp(1.7rem,2.4vw,2.3rem)}
+  .services__hint{display:none}
+}
+
+/* ── 5. Tableta ──────────────────────────────────────────── */
+@media (max-width:1080px){
+  :root{--sec:clamp(64px,10vh,110px)}
+  .phero{padding-top:clamp(120px,16vh,160px);padding-bottom:clamp(36px,6vh,64px)}
+}
+
+/* ── 6. Móvil ────────────────────────────────────────────── */
+@media (max-width:760px){
+  :root{--sec:56px;--pad:20px;--gap:24px}
+
+  /* Cabeceras de página: sin huecos enormes */
+  .phero{padding:104px var(--pad) 32px}
+  .phero__title{font-size:clamp(2.1rem,9.4vw,2.8rem);line-height:1.05}
+  .phero__lead{font-size:1rem;margin-top:14px}
+  .phero--article{padding-bottom:20px}
+  .article__title{font-size:clamp(1.75rem,7.6vw,2.3rem);line-height:1.12}
+  .article__meta{gap:4px 14px;font-size:.84rem}
+  .hero{padding-top:104px}
+
+  /* Secciones y títulos */
+  .h-section{font-size:clamp(1.75rem,7.6vw,2.3rem);line-height:1.08}
+  .h-display{font-size:clamp(2rem,9vw,2.6rem)}
+  .shead{margin-bottom:22px}
+  .manifesto{padding-block:48px}
+  .manifesto__text{font-size:clamp(1.15rem,5vw,1.35rem);line-height:1.45;font-weight:500;letter-spacing:-.01em}
+  .wrap{padding-block:44px}
+  .band{padding-block:56px}
+  .band p{font-size:.98rem}
+  .related{padding-top:44px}
+
+  /* Portada más corta: mismas secciones, menos relleno */
+  .hero{min-height:auto}
+  .pillars{gap:10px;margin-top:28px}
+  .pillar,.card{padding:16px 18px;border-radius:16px}
+  .pillar h2,.pillar h3,.card h3{font-size:1.02rem;margin-bottom:6px}
+  .pillar p,.card p{font-size:.92rem;line-height:1.5}
+  .why .cards{gap:10px}
+  .promises{gap:8px;margin-top:20px}
+  .promises li,.promises--wide li{flex-direction:row;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;font-size:.95rem}
+  .promises li .mono{width:32px;height:32px;border-radius:10px;flex:none}
+  .steps{gap:26px}
+  .step h3{font-size:1.1rem}
+  .step p{font-size:.93rem}
+  .fx-logos{padding-block:36px}
+  .fx-logos__label{margin-bottom:16px}
+  .fx-logo{padding:7px 11px 7px 8px;font-size:.82rem;gap:8px}
+  .fx-logo img{width:18px;height:18px}
+  .guides-teaser .glist > .gcard:nth-child(n+5){display:none}
+  .faq__list{gap:8px}
+
+  /* Tarjetas de guía compactas */
+  .glist{gap:12px}
+  .gcard__link{padding:18px 18px 16px;gap:8px;border-radius:16px}
+  .gcard__cat,.gcard__title{padding-inline-end:38px}
+  .gcard__title,.gcard--big .gcard__title{font-size:1.08rem;line-height:1.28;max-width:none}
+  .gcard__desc,.gcard--big .gcard__desc{
+    font-size:.9rem;line-height:1.5;
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .gcard__go{width:28px;height:28px;inset-block-start:16px;inset-inline-end:16px}
+  .gcard__go svg{width:14px;height:14px}
+  .gcard__meta{font-size:.8rem}
+  .gcard--big .gcard__link{background:linear-gradient(170deg,var(--panel-a),var(--panel-b))}
+
+  /* Filtro: una fila que se desliza, de borde a borde */
+  .gfilter{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(var(--pad) * -1);padding:2px var(--pad) 4px;scrollbar-width:none}
+  .gfilter::-webkit-scrollbar{display:none}
+  .guides > .h-section{margin-bottom:14px}
+
+  /* "Cómo escribimos estas guías" */
+  .editorial__grid{gap:16px}
+  .editorial__body{gap:14px;font-size:.95rem}
+
+  /* Tablas: en móvil, cada fila es una ficha con la etiqueta de su columna */
+  table.rtable{display:block;overflow:visible;border:0}
+  table.rtable thead{display:none}
+  table.rtable tbody,table.rtable tr,table.rtable td{display:block;width:auto;min-width:0}
+  table.rtable tr{border:1px solid var(--line);border-radius:14px;padding:6px 14px;margin-bottom:10px;background:var(--soft)}
+  table.rtable td{padding:9px 0;border-bottom:1px solid var(--line)}
+  table.rtable tr td:last-child{border-bottom:0}
+  table.rtable td::before{content:attr(data-label);display:block;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--violet-lit);margin-bottom:3px}
+  table.rtable td[data-label=""]::before{display:none}
+  table.rtable td:first-child{color:var(--text);font-weight:600}
+  [dir="rtl"] table.rtable td::before{letter-spacing:0;text-transform:none}
+
+  /* Lectura de guías y servicios */
+  .doc{font-size:1rem;line-height:1.7}
+  .doc h2{font-size:1.4rem;margin-top:2em}
+  .toc{position:static}
+  .toc__box{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .toc__box summary{margin-bottom:0}
+  .toc__box[open] summary{margin-bottom:10px}
+
+  /* Un solo botón flotante: el asistente, que ya ofrece "Hablar con
+     una persona" por WhatsApp. WhatsApp sigue en el menú, en contacto
+     y al final de cada página. */
+  .wa-fab{display:none !important}
+  .bot{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
+  .bot__btn{width:52px;height:52px}
+  .bot__ico{width:22px;height:22px}
+  .footer{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+
+  /* Pie más compacto */
+  .footer__grid{padding-block:36px 28px;gap:28px}
+  .footer__base{padding-block:18px}
+}
+
+/* ── 7. Quien prefiere menos movimiento: ninguno ─────────── */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms !important}
+}

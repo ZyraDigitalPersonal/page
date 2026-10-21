@@ -141,7 +141,7 @@
 
   const policyHref = () => {
     const css = $('link[href*="zyra.css"]');
-    const root = css ? css.getAttribute('href').split('?')[0].replace('assets/css/zyra.css', '') : '';
+    const root = css ? css.getAttribute('href').split('?')[0].replace(/assets\/css\/.*$/, '') : '';
     return root + 'legal/cookies/index.html';
   };
 

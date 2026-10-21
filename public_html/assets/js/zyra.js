@@ -1,7 +1,9 @@
 /* ============================================================
-   ZYRA — motion, tema, idioma e interacción
-   GSAP + ScrollTrigger + Lenis. Si alguna librería no carga,
-   la web sigue siendo completamente usable y legible.
+   ZYRA — tema, idioma, menú, formularios e interacción
+   v49: GSAP, ScrollTrigger y Lenis ya no se cargan. Las ramas que
+   los usaban quedan inactivas (HAS_GSAP es false) y la web usa el
+   scroll nativo; las transiciones discretas viven en zyra-pro.css
+   y zyra-fx.js.
    ============================================================ */
 
 (() => {
@@ -166,59 +168,6 @@
       ry(-14 + nx * 5);
       rx(6 - ny * 4);
       rz(-1.5 + nx * 1);
-    }, { passive: true });
-  }
-
-  /* ── 5. Click Spark ───────────────────────────────── */
-  const canvas = $('#spark');
-  if (canvas && !REDUCED) {
-    const ctx = canvas.getContext('2d');
-    let dpr = Math.min(window.devicePixelRatio || 1, 2);
-    let sparks = [];
-    let raf = null;
-
-    const size = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    size();
-    window.addEventListener('resize', size);
-
-    const DURATION = 420, COUNT = 9, LEN = 15, RADIUS = 22;
-    const ease = t => 1 - Math.pow(1 - t, 3);
-
-    const draw = now => {
-      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      const accent = getComputedStyle(html).getPropertyValue('--violet-lit').trim() || '#A855F7';
-      sparks = sparks.filter(s => now - s.t < DURATION);
-      ctx.lineCap = 'round';
-      sparks.forEach(s => {
-        const p = ease((now - s.t) / DURATION);
-        const dist = RADIUS + p * 26;
-        const len = LEN * (1 - p);
-        const x1 = s.x + Math.cos(s.a) * dist;
-        const y1 = s.y + Math.sin(s.a) * dist;
-        ctx.globalAlpha = 1 - p;
-        ctx.strokeStyle = accent;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        ctx.moveTo(x1, y1);
-        ctx.lineTo(x1 + Math.cos(s.a) * len, y1 + Math.sin(s.a) * len);
-        ctx.stroke();
-      });
-      ctx.globalAlpha = 1;
-      if (sparks.length) raf = requestAnimationFrame(draw);
-      else { raf = null; ctx.clearRect(0, 0, window.innerWidth, window.innerHeight); }
-    };
-
-    window.addEventListener('pointerdown', e => {
-      const now = performance.now();
-      for (let i = 0; i < COUNT; i++) {
-        sparks.push({ x: e.clientX, y: e.clientY, a: (Math.PI * 2 * i) / COUNT + Math.random() * 0.25, t: now });
-      }
-      if (!raf) raf = requestAnimationFrame(draw);
     }, { passive: true });
   }
 
@@ -562,7 +511,7 @@
       const email = (($('input[name="email"]', form) || {}).value || '').trim();
       const nombre = (($('input[name="nombre"]', form) || {}).value || '').trim().split(' ')[0];
       const wa = ($('a[href^="https://wa.me"]') || {}).href || 'https://wa.me/34643412454';
-      const home = (window.ZYRA_URL ? (($('link[href*="zyra.css"]') || { getAttribute: () => '' }).getAttribute('href').split('?')[0].replace('assets/css/zyra.css', '') + window.ZYRA_URL('home')) : '/');
+      const home = (window.ZYRA_URL ? (($('link[href*="zyra.css"]') || { getAttribute: () => '' }).getAttribute('href').split('?')[0].replace(/assets\/css\/.*$/, '') + window.ZYRA_URL('home')) : '/');
       const safe = t => String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
       let box = $('.form__ok', form);
       if (!box) {
@@ -701,7 +650,7 @@
   const DESKTOP = window.matchMedia('(min-width: 821px)').matches;
   if (window.ScrollTrigger) ScrollTrigger.config({ limitCallbacks: true, ignoreMobileResize: true });
   const css = $('link[href*="zyra.css"]');
-  const root = css ? css.getAttribute('href').split('?')[0].replace('assets/css/zyra.css', '') : '';
+  const root = css ? css.getAttribute('href').split('?')[0].replace(/assets\/css\/.*$/, '') : '';
   const WA = ($('a[href^="https://wa.me"]') || {}).href || 'https://wa.me/34643412454';
 
   /* ── 1. Los mockups se inclinan con el cursor ─────── */

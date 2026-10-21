@@ -34,22 +34,15 @@
 <link href="../../assets/img/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="../../site.webmanifest" rel="manifest"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;700&amp;family=Noto+Kufi+Arabic:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="../../assets/css/zyra.css?v=48" rel="stylesheet"/>
-<link href="../../assets/css/resenas.css?v=48" rel="stylesheet"/>
-<link href="../../assets/css/rtl.css?v=48" rel="stylesheet"/>
-<link href="../../assets/css/zyra-fx.css?v=48" rel="stylesheet"/>
-<script src="../../assets/js/boot.js?v=48"></script>
-<script src="../../assets/js/gtag.js?v=48"></script>
+<link as="font" crossorigin="" href="../../assets/fonts/ibm-plex-sans-arabic-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../assets/css/build/rtl/zyra.css?v=51" rel="stylesheet"/>
+<script src="../../assets/js/boot.js?v=51"></script>
+<script defer="" src="../../assets/js/gtag.js?v=51"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://digitalzyra.com/#organization","name":"ZYRA","alternateName":"ZYRA Digital","url":"https://digitalzyra.com/","logo":{"@type":"ImageObject","url":"https://digitalzyra.com/assets/img/icon-512.png","width":512,"height":512},"image":"https://digitalzyra.com/assets/img/og-zyra.jpg","email":"zyradigitalpersonal@gmail.com","telephone":"+34643412454","areaServed":[{"@type":"Country","name":"España"},"Worldwide"],"knowsLanguage":["es","en","ar"],"founder":[{"@type":"Person","name":"Kilian Abraham Barreto Mendoza"},{"@type":"Person","name":"Ahmednah Mohamed Saleh"},{"@type":"Person","name":"Iker Alonso Armas"}],"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"zyradigitalpersonal@gmail.com","telephone":"+34643412454","availableLanguage":["Spanish","English","Arabic"],"hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"}}],"sameAs":["https://www.instagram.com/zyra_personal?stkn=cDV1cXg5bzhrcXl6&utm_source=qr","https://www.tiktok.com/@digitalzyra?_r=1&_t=ZN-99xErccwQJ4","https://www.linkedin.com/in/digital-zyra-730293439"]},{"@type":"WebSite","@id":"https://digitalzyra.com/#website","url":"https://digitalzyra.com/","name":"ZYRA","publisher":{"@id":"https://digitalzyra.com/#organization"},"inLanguage":["es-ES","en","ar"]},{"@type":"BreadcrumbList","@id":"https://digitalzyra.com/ar-ar/contact/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://digitalzyra.com/ar-ar/"},{"@type":"ListItem","position":2,"name":"تواصل معنا","item":"https://digitalzyra.com/ar-ar/contact/"}]},{"@type":"ContactPage","@id":"https://digitalzyra.com/ar-ar/contact/#webpage","url":"https://digitalzyra.com/ar-ar/contact/","name":"تواصل معنا واطلب عرض سعر مجاني | ZYRA","description":"حدّثنا عن مشروعك عبر النموذج أو احجز مكالمة أو راسلنا على واتساب. نرد خلال 24 ساعة عمل.","inLanguage":"ar","isPartOf":{"@id":"https://digitalzyra.com/#website"},"about":{"@id":"https://digitalzyra.com/#organization"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://digitalzyra.com/assets/img/og-zyra.jpg"},"dateModified":"2026-09-16","breadcrumb":{"@id":"https://digitalzyra.com/ar-ar/contact/#breadcrumb"}}]}</script>
 </head>
 <body data-lang="ar" data-page="contacto/">
-<noscript><link href="../../assets/css/nojs.css?v=48" rel="stylesheet"/></noscript>
+<noscript><link href="../../assets/css/nojs.css?v=51" rel="stylesheet"/></noscript>
 
-<canvas aria-hidden="true" class="spark" id="spark"></canvas>
 <a class="skip" href="#main">الانتقال إلى المحتوى</a>
 <header class="nav" id="nav">
 <a aria-label="ZYRA" class="nav__brand" href="../../ar-ar/">
@@ -145,7 +138,7 @@
 <select id="i-servicio" name="servicio"><option value="Desarrollo web">تطوير المواقع</option><option value="Software a medida">برمجيات مخصصة</option><option value="Automatización">الأتمتة</option><option value="Agentes de IA">وكلاء الذكاء الاصطناعي</option><option value="Aún no lo tengo claro">لم أحدد بعد</option></select></div>
 <div class="field field--full"><label for="i-mensaje">حدّثنا عن مشروعك</label><textarea id="i-mensaje" name="mensaje" required="" rows="4"></textarea></div>
 <label class="check field--full"><input name="privacidad" required="" type="checkbox" value="1"/><span>قرأت <a href="../../ar-ar/legal/privacy-policy/" rel="noopener" target="_blank">سياسة الخصوصية</a> وأوافق عليها.</span></label>
-<button class="btn btn--light form__send" data-magnet="" type="submit">اطلب معلومات</button>
+<button class="btn btn--light form__send" type="submit">اطلب معلومات</button>
 <p class="form__done" hidden="">تم إرسال الطلب. سنرد عليك عبر البريد الإلكتروني أو واتساب خلال 24 ساعة عمل.</p>
 </form>
 <form accept-charset="utf-8" action="../../api/contacto.php" aria-labelledby="tab-cita" class="form" hidden="" id="form-cita" method="post" novalidate=""><input name="t" type="hidden" value=""/><input name="lang" type="hidden" value="ar"/><input name="tipo" type="hidden" value="cita"/><div aria-hidden="true" class="hp"><label>اترك هذا الحقل فارغاً<input autocomplete="off" name="website" tabindex="-1" type="text"/></label></div>
@@ -163,7 +156,7 @@
 <div class="field field--full"><label for="c-mensaje">الرسالة (اختياري)</label><textarea id="c-mensaje" name="mensaje" rows="3"></textarea></div>
 <label class="check field--full"><input name="privacidad" required="" type="checkbox" value="1"/><span>قرأت <a href="../../ar-ar/legal/privacy-policy/" rel="noopener" target="_blank">سياسة الخصوصية</a> وأوافق عليها.</span></label>
 <p class="form__warn field--full">هذا طلب وليس حجزاً مؤكداً: سنراسلك للاتفاق على اليوم والساعة بالضبط.</p>
-<button class="btn btn--light form__send" data-magnet="" type="submit">اطلب مكالمة</button>
+<button class="btn btn--light form__send" type="submit">اطلب مكالمة</button>
 <p class="form__done" hidden="">تم استلام الطلب. سنؤكد اليوم والساعة عبر البريد الإلكتروني أو واتساب.</p>
 </form>
 </div>
@@ -186,14 +179,10 @@
 </div>
 </div>
 <div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__nap">مشروع مستقل · فريق يعمل عن بُعد</span><span class="footer__legal"><a href="../../ar-ar/legal/legal-notice/">الإشعار القانوني</a><a href="../../ar-ar/legal/privacy-policy/">الخصوصية</a><a href="../../ar-ar/legal/cookie-policy/">ملفات تعريف الارتباط</a></span></div>
-<div aria-hidden="true" class="zy-wm"><span data-l="Z" style="--i:0">Z</span><span data-l="Y" style="--i:1">Y</span><span data-l="R" style="--i:2">R</span><span data-l="A" style="--i:3">A</span></div>
 </footer>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script defer="" src="../../assets/js/i18n-ar.js?v=48"></script><script defer="" src="../../assets/js/lang.js?v=48"></script><script defer="" src="../../assets/js/cookies.js?v=48"></script>
-<script defer="" src="../../assets/js/zyra.js?v=48"></script>
-<script defer="" src="../../assets/js/zyra-fx.js?v=48"></script>
-<script defer="" src="../../assets/js/resenas.js?v=48"></script>
+<script defer="" src="../../assets/js/i18n-ar.js?v=51"></script><script defer="" src="../../assets/js/lang.js?v=51"></script><script defer="" src="../../assets/js/cookies.js?v=51"></script>
+<script defer="" src="../../assets/js/zyra.js?v=51"></script>
+<script defer="" src="../../assets/js/zyra-fx.js?v=51"></script>
+<script defer="" src="../../assets/js/resenas.js?v=51"></script>
 </body>
 </html>

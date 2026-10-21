@@ -260,3 +260,40 @@ A petición del propietario se ha aplicado todo el plan de acción posible sin d
 6. Seguir publicando guías con regularidad (no hay mínimo oficial, pero el peso del contenido editorial frente al comercial sigue siendo la clave).
 
 **Decisión recomendada, actualizada:** con 10 guías propias, servicios sin plantilla y los problemas de confianza corregidos, el sitio está en condiciones razonables para **solicitar la revisión** una vez desplegado y con el mensaje de consentimiento creado en AdSense. La aprobación no está garantizada: si vuelve a rechazarse por «contenido de poco valor», la causa restante sería el peso comercial del sitio, y la alternativa sigue siendo un proyecto editorial separado.
+
+---
+
+## Tercera ronda — diseño móvil, animaciones y SEO avanzado (21/10/2026)
+
+### Animaciones
+- **Retiradas:** GSAP, ScrollTrigger y Lenis (tres librerías externas y el scroll «suave» que secuestraba la rueda), chispas al hacer clic, aurora WebGL, titulares con desenfoque palabra a palabra, cintas en movimiento, halos que respiran, anillos que giran, brillos, botones magnéticos, inclinación de imágenes con el cursor y el «ZYRA» gigante animado del pie.
+- **Nuevas (`assets/js/zyra-fx.js` + `assets/css/zyra-pro.css`):** aparición corta (opacidad + 14 px, 0,6 s, una sola vez) de tarjetas y cabeceras al entrar en pantalla; entrada suave del título de cada página; menú, desplegables y panel del asistente que aparecen con un fundido breve; hover discreto en tarjetas y botones. Nada se mueve solo. Con «reducir movimiento» del sistema no hay ninguna animación.
+- Se mantienen las animaciones que informan: «cargando», «escribiendo…» y la barra de progreso de lectura.
+
+### Móvil
+- Espaciados verticales recalculados (secciones de ~120 px a 56 px de relleno, cabeceras sin hueco), títulos a tamaño de pantalla.
+- Guías: **filtro por tema** (Todas, Web, Automatización, Legal, IA), tarjetas compactas con descripción a 3 líneas e índice «En esta guía» plegado.
+- **Tablas convertidas en fichas** en pantallas pequeñas (31 tablas en 27 páginas), con la etiqueta de cada columna.
+- Un único botón flotante en móvil (el asistente, que incluye «Hablar con una persona» por WhatsApp); el pie ya no tiene franja vacía.
+- Portada: cinta de tecnologías como cuadrícula fija; pilares, compromisos y tarjetas más compactos; el bloque «Tecnología sin humo» deja de ser un párrafo enorme en negrita.
+- Escritorio: los servicios de la portada pasan a cuadrícula 2×2 (antes dependían de GSAP).
+
+### Rendimiento
+- Sin dependencias externas para pintar la página: **fuentes alojadas en el servidor** (Geist recortada a latín; Noto Kufi Arabic e IBM Plex Sans Arabic para árabe; licencias OFL en `assets/fonts/`) y precarga de la fuente principal.
+- **Una sola hoja CSS minificada** por dirección (`assets/css/build/ltr|rtl/zyra.css`, ~31 KB comprimida) en lugar de cuatro, más Google Fonts. Las fuentes CSS originales siguen en `assets/css/` y se regeneran con `herramientas/build-css.sh`.
+- `gtag.js` diferido. CSP sin jsDelivr ni Fontshare.
+- Lighthouse móvil, servidor local con compresión (como Apache con `mod_deflate`): **97–99 en español e inglés, 85 en árabe**; accesibilidad 100, buenas prácticas 100, SEO 100. CLS 0–0,03. (Antes: 66–80.)
+
+### SEO
+- **Imagen social propia (1200×630) para cada guía y cada servicio** en los 3 idiomas (23 imágenes en `assets/img/og/`), enlazada en Open Graph, Twitter, `primaryImageOfPage` y `Article.image`.
+- Metadatos de artículo en las guías: `article:published_time`, `article:modified_time`, `article:section`, `article:author`.
+- Datos estructurados: `AboutPage` y `ContactPage`; índice de guías como `CollectionPage` con `ItemList` ordenada.
+- **Sitemap con imágenes** (`image:image`) y **feed Atom de guías** (`/es-es/guias/feed.xml`), enlazado desde el índice y desde cada guía.
+- Títulos ≤ 60 caracteres y descripciones 70–160 en todas las páginas indexables; sin duplicados.
+- Anclas descriptivas («Ver automatización» en lugar de «Saber más»).
+- Auditoría automática: 50 páginas indexables = 50 URL del sitemap; canónicas propias; un `h1` por página; hreflang recíproco; todas las imágenes con `alt` y dimensiones.
+
+### Pendiente para el propietario
+- Tras desplegar, **enviar el sitemap y el feed** en Search Console y usar «Inspeccionar URL» en las guías nuevas.
+- Medir en producción con PageSpeed Insights (los datos de campo de Core Web Vitals solo existen con tráfico real).
+- Si se edita el CSS: ejecutar `herramientas/build-css.sh` y subir el número `?v=` de las páginas.

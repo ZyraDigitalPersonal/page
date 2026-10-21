@@ -22,7 +22,7 @@
   /* Raíz del sitio, igual que en zyra.js: funciona en subpáginas */
   const cssLink = $('link[href*="zyra.css"]');
   const ROOT = cssLink
-    ? cssLink.getAttribute('href').split('?')[0].replace('assets/css/zyra.css', '')
+    ? cssLink.getAttribute('href').split('?')[0].replace(/assets\/css\/.*$/, '')
     : '';
   const API = ROOT + 'api/resenas.php';
   const DEMO = location.protocol === 'file:' ||
