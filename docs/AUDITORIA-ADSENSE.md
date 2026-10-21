@@ -241,7 +241,7 @@ A petición del propietario se ha aplicado todo el plan de acción posible sin d
 - CSP del `.htaccess` ampliada con los dominios de AdSense y del mensaje de consentimiento de Google (Funding Choices).
 - Política de privacidad (3 idiomas): indica que los anuncios solo aparecen en las guías.
 - Accesibilidad: nombre accesible del botón de idioma, orden de encabezados en portada e índice, rol incorrecto en formularios, cabeceras de tabla vacías.
-- Versión de caché `?v=48` en todas las páginas; `lastmod` del sitemap actualizado (49 URL en el sitemap).
+- Versión de caché `?v=48` en todas las páginas; `lastmod` del sitemap actualizado (50 URL en el sitemap).
 - `zyra-build/LEEME-NO-EJECUTAR.md`: aviso de que el generador está desfasado.
 
 ### Validación (segunda ronda)
