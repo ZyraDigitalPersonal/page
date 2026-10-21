@@ -101,7 +101,10 @@ if ($nombreFinal === '') $nombreFinal = 'Cliente';
 
 $avatar = $verificada ? zyra_guardar_avatar($google['foto'], $id) : '';
 
-$revisar = defined('RESENAS_REVISAR_ANTES') && RESENAS_REVISAR_ANTES;
+// Todas las reseñas se revisan en el panel antes de publicarse (contenido de
+// usuarios moderado: evita spam y opiniones falsas). Antes dependía de
+// RESENAS_REVISAR_ANTES en config.php; ahora es siempre así.
+$revisar = true;
 $spam = zyra_parece_spam($texto, $nombreFinal, $empresa);
 $auto = !$revisar && !$spam;
 

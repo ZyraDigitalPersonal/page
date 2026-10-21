@@ -1,5 +1,5 @@
 /* ============================================================
-   ZYRA — Reseñas de clientes (v10: se publican al momento)
+   ZYRA — Reseñas de clientes (se revisan antes de publicarse)
    · Pinta las reseñas publicadas en la home
    · Formulario en ventana emergente, con Google o sin cuenta
    · Si no hay PHP (o se abre el archivo en local) entra en
@@ -34,8 +34,8 @@
     titulo:   ['Reseñas de quienes<br><em>ya trabajan con nosotros.</em>', 'Reviews from the people<br><em>who already work with us.</em>'],
     escribir: ['Escribir una reseña', 'Write a review'],
     tituloVacio:['Reseñas', 'Reviews'],
-    vacio:    ['Todavía no hay reseñas publicadas. Si ya has trabajado con nosotros, escribe la primera: sale en esta página al momento.',
-               'There are no reviews yet. If you have already worked with us, write the first one: it appears on this page straight away.'],
+    vacio:    ['Todavía no hay reseñas publicadas. Si ya has trabajado con nosotros, escribe la primera: la publicamos después de revisarla.',
+               'There are no reviews yet. If you have already worked with us, write the first one: we publish it after reviewing it.'],
     de5:      ['de 5', 'out of 5'],
     opinion:  ['reseña', 'review'],
     opiniones:['reseñas', 'reviews'],
@@ -43,8 +43,8 @@
     vertodas: ['Ver todas las reseñas', 'See all reviews'],
     /* Formulario */
     fTitulo:  ['Cuéntanos qué tal fue', 'Tell us how it went'],
-    fIntro:   ['Tu reseña se publica al momento en la sección de reseñas y la ve cualquiera que visite la web.',
-               'Your review is published straight away in the reviews section, for every visitor to see.'],
+    fIntro:   ['Revisamos cada reseña antes de publicarla para evitar spam y opiniones falsas. Cuando la aprobemos, la verá cualquiera que visite la web.',
+               'We review every review before publishing it to keep out spam and fake opinions. Once approved, every visitor will be able to see it.'],
     fNota:    ['Valoración', 'Rating'],
     fGoogle:  ['Entra con Google y tu reseña saldrá con tu nombre y tu foto reales.',
                'Sign in with Google and your review will show your real name and photo.'],

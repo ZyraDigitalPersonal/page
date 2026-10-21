@@ -2391,3 +2391,19 @@ body.fab-quiet .bot__btn[aria-expanded="false"]{opacity:0;transform:translateY(1
   .zy-wm span::after{animation:none;opacity:.5}
   .zy-wm.is-ready span,.zy-wm.is-in span{opacity:1;filter:none;transform:none;transition:none}
 }
+
+/* ── v48 · Código en las guías, herramientas enlazadas y detalle de servicios ── */
+.doc pre{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:18px 20px;border-radius:12px;background:var(--soft);border:1px solid var(--line);font-size:.84em;line-height:1.65;tab-size:2}
+.doc code{font-family:var(--mono);font-size:.9em}
+.doc :not(pre) > code{padding:2px 7px;border-radius:6px;background:var(--soft-2);color:var(--text)}
+.doc pre code{font-size:inherit;color:var(--text);white-space:pre}
+.doc .svc-tools{list-style:none;padding:0;gap:10px}
+.doc .svc-tools a:not(.alink):not(.btn){text-decoration:none;color:var(--muted)}
+.doc .svc-tools a strong{color:var(--text)}
+.svc-tools a::after{content:"↗"}
+.svc-doc{padding-bottom:clamp(24px,5vh,56px)}
+.guides-teaser .glist--three + .guides-teaser__all{margin-top:28px}
+[dir="rtl"] .svc-tools a::after{content:"↖"}
+.article > .doc{min-width:0}
+.pillar h2{font-size:1.15rem;margin-bottom:10px}
+.guides > .h-section{font-size:clamp(1.5rem,2.6vw,2.2rem);margin-bottom:clamp(22px,3.5vh,36px)}

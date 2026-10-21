@@ -460,8 +460,8 @@ window.ZYRA_AR_KEYS = {"saludo": ["مرحبا", "مرحباً", "السلام ع
 Object.assign(window.ZYRA_AR, {
 "Reviews": "التقييمات",
 "Reviews from the people<br><em>who already work with us.</em>": "تقييمات من<br><em>يعملون معنا بالفعل.</em>",
-"There are no reviews yet. If you have already worked with us, write the first one: it appears on this page straight away.": "لا توجد تقييمات منشورة بعد. إن كنت قد عملت معنا، اكتب أول تقييم: سيظهر في هذه الصفحة فوراً.",
-"Your review is published straight away in the reviews section, for every visitor to see.": "يُنشر تقييمك فوراً في قسم التقييمات ويراه كل زوار الموقع.",
+"There are no reviews yet. If you have already worked with us, write the first one: we publish it after reviewing it.": "لا توجد تقييمات منشورة بعد. إن كنت قد عملت معنا، اكتب أول تقييم: ننشره بعد مراجعته.",
+"We review every review before publishing it to keep out spam and fake opinions. Once approved, every visitor will be able to see it.": "نراجع كل تقييم قبل نشره لمنع الرسائل المزعجة والآراء المزيفة. وبعد الموافقة عليه سيراه كل زوار الموقع.",
 "Thank you. Your review is waiting for a quick check and will be published shortly.": "شكراً لك. تقييمك بانتظار مراجعة سريعة وسيُنشر قريباً.",
 "Thank you! Your review is now live on the website.": "شكراً لك! تقييمك منشور الآن على الموقع.",
 "We pass your answers to the contact form: only your name and email are missing. No commitment.": "ننقل إجاباتك إلى نموذج التواصل: لا ينقص سوى اسمك وبريدك الإلكتروني. دون أي التزام.",

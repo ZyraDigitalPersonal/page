@@ -202,3 +202,61 @@ Commits en la rama `claude/dazzling-dirac-l736hs`:
 
 ### Despliegue
 Los cambios están solo en el repositorio. Para publicarlos, hay que subir a Hostinger los 19 archivos modificados de `public_html/` (`git diff --name-only c83169c HEAD`). No he desplegado nada ni he solicitado ninguna revisión en AdSense.
+
+---
+
+## Segunda ronda — implementación completa (21/10/2026)
+
+A petición del propietario se ha aplicado todo el plan de acción posible sin datos externos. Resumen:
+
+### Contenido (lo principal)
+- **5 guías nuevas** en `es-es/guias/` (10 en total), escritas con información verificable y enlaces a la documentación oficial de cada herramienta:
+  - *Make, Zapier o n8n: cómo elegir herramienta para automatizar* (comparativa con criterios y un caso resuelto en las tres).
+  - *Tutorial: del formulario de tu web a Google Sheets y un aviso al equipo, con Make* (paso a paso, con código PHP para reenviar el formulario desde el servidor y gestión de errores).
+  - *Llamadas perdidas en un negocio local: qué puede atender un agente de voz y qué no* (cómo funciona, ejemplo de clínica dental, RGPD y Reglamento de IA).
+  - *WhatsApp Business para negocios: app, API y qué necesitas para un chatbot* (ventana de 24 h, plantillas, normas de Meta sobre IA de 2026).
+  - *Una web que funciona sin conexión: lo que aprendimos haciendo ZyraBus* (PWA, service worker, iPhone, datos abiertos).
+- Índice de guías, «Sigue leyendo» de todas las guías, portada (6 guías destacadas) y páginas de servicio enlazadas con las guías nuevas.
+- **Páginas de servicio en árabe reescritas** (ya estaban ES y EN).
+- **Bloque «Herramientas que usamos»** en las 12 páginas de servicio, con enlaces oficiales: Make, Zapier, n8n, OpenAI, Anthropic, WhatsApp Business Platform, Twilio, Google Sheets, Slack, Figma, React, Next.js, WordPress, Search Console, PageSpeed, Node.js, PHP, Python, MySQL, PostgreSQL. Sin afiliación.
+- Pilares genéricos de la portada sustituidos por compromisos concretos («Primero el problema», «Pruebas con datos reales», «Documentado para que no dependas»).
+- Eliminado de la portada el bloque «Elige un punto de partida», que repetía `/servicios/`.
+- Corrección factual: n8n no es «código abierto» en sentido estricto, sino *fair-code* (lo dice su propia documentación).
+
+### Diseño
+- Páginas de servicio con **índice lateral** («En esta página»), igual que las guías.
+- Estilos nuevos para bloques de código y para la lista de herramientas externas (↗).
+- Corregido un desbordamiento horizontal en móvil de tablas y código dentro de las guías.
+- **Imagen con la interfaz de ChatGPT sustituida** por capturas reales del asistente del propio sitio (ES/EN/AR).
+- **Maqueta de «Automator» (macOS) sustituida** por un diagrama del flujo real del tutorial (ES/EN/AR).
+- Título «Todas las guías» en el índice de guías.
+
+### Confianza y transparencia
+- Cargos unificados como **cofundadores** (página Sobre nosotros y asistente, 3 idiomas), coherente con el aviso legal.
+- **Reseñas siempre moderadas**: `api/resenas.php` fuerza la revisión previa; textos del formulario actualizados (ES/EN/AR).
+
+### AdSense y técnica
+- Meta `google-adsense-account` (ca-pub-9293246097390358) en las 52 páginas públicas.
+- `assets/js/gtag.js`: AdSense se carga **solo en las guías y solo tras aceptar marketing**, igual que la etiqueta de Google Ads. Servicios, contacto y legales nunca cargan anuncios.
+- CSP del `.htaccess` ampliada con los dominios de AdSense y del mensaje de consentimiento de Google (Funding Choices).
+- Política de privacidad (3 idiomas): indica que los anuncios solo aparecen en las guías.
+- Accesibilidad: nombre accesible del botón de idioma, orden de encabezados en portada e índice, rol incorrecto en formularios, cabeceras de tabla vacías.
+- Versión de caché `?v=48` en todas las páginas; `lastmod` del sitemap actualizado (49 URL en el sitemap).
+- `zyra-build/LEEME-NO-EJECUTAR.md`: aviso de que el generador está desfasado.
+
+### Validación (segunda ronda)
+- 52 páginas: 0 enlaces internos rotos, 0 anclas rotas, 0 ids duplicados, 0 errores de estructura HTML, 50 bloques JSON-LD válidos, sitemap XML válido.
+- Lighthouse móvil (local): accesibilidad 98–100 en guías, servicios y sobre nosotros; 95 en portada (queda el contraste del texto animado del manifiesto, que Lighthouse mide a mitad de animación). SEO 100 en todas.
+- Capturas en 1366 px y 390 px sin desbordamiento horizontal.
+- Sin errores de JavaScript propios (solo fallan los CDN, bloqueados en este entorno).
+- Enlaces externos: no se pueden abrir desde el entorno; los más específicos se han comprobado por búsqueda (Make webhooks y reintentos, Zapier tareas, n8n licencia, OpenAI Realtime, precios de Meta).
+
+### Lo que sigue dependiendo del propietario (no se puede hacer desde el código)
+1. **Mensaje de consentimiento certificado**: en AdSense → *Privacidad y mensajes* → crear el mensaje de normativa europea (CMP de Google). Sin él, en el EEE solo se servirán anuncios limitados/no personalizados. Si se activa, revisar `cookies.js` para no mostrar dos banners.
+2. **Anuncios automáticos**: si se activan, excluir en AdSense las URL que no son `/es-es/guias/` (el código ya solo se carga en guías).
+3. NIF y razón social en el aviso legal; buzón con dominio propio.
+4. Confirmar las afirmaciones sobre la forma de trabajar listadas en §C y la mención a Twilio como proveedor de telefonía.
+5. Revisión por un hablante nativo del árabe de las páginas reescritas.
+6. Seguir publicando guías con regularidad (no hay mínimo oficial, pero el peso del contenido editorial frente al comercial sigue siendo la clave).
+
+**Decisión recomendada, actualizada:** con 10 guías propias, servicios sin plantilla y los problemas de confianza corregidos, el sitio está en condiciones razonables para **solicitar la revisión** una vez desplegado y con el mensaje de consentimiento creado en AdSense. La aprobación no está garantizada: si vuelve a rechazarse por «contenido de poco valor», la causa restante sería el peso comercial del sitio, y la alternativa sigue siendo un proyecto editorial separado.

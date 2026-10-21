@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="es-ES">
+<head><meta charset="utf-8"/>
+<meta content="ca-pub-9293246097390358" name="google-adsense-account"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Tutorial Make: formulario web a Google Sheets y aviso | ZYRA</title>
+<meta content="Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Incluye el código para enviarlo desde el servidor." name="description"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
+<link href="https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/" rel="canonical"/><link href="https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/" hreflang="es-ES" rel="alternate"/><link href="https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/" hreflang="x-default" rel="alternate"/>
+<meta content="#07090D" name="theme-color"/>
+<meta content="ZYRA" name="author"/>
+<meta content="article" property="og:type"/>
+<meta content="ZYRA" property="og:site_name"/>
+<meta content="Tutorial Make: formulario web a Google Sheets y aviso | ZYRA" property="og:title"/>
+<meta content="Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Incluye el código para enviarlo desde el servidor." property="og:description"/>
+<meta content="https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/" property="og:url"/>
+<meta content="https://digitalzyra.com/assets/img/og-zyra.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="ZYRA" property="og:image:alt"/>
+<meta content="es_ES" property="og:locale"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Tutorial Make: formulario web a Google Sheets y aviso | ZYRA" name="twitter:title"/>
+<meta content="Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Incluye el código para enviarlo desde el servidor." name="twitter:description"/>
+<meta content="https://digitalzyra.com/assets/img/og-zyra.jpg" name="twitter:image"/>
+<link href="../../../favicon.ico" rel="icon" sizes="48x48"/>
+<link href="../../../assets/img/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="../../../assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="../../../site.webmanifest" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="../../../assets/css/zyra.css?v=48" rel="stylesheet"/>
+<link href="../../../assets/css/resenas.css?v=48" rel="stylesheet"/>
+<link href="../../../assets/css/zyra-fx.css?v=48" rel="stylesheet"/>
+<script src="../../../assets/js/boot.js?v=48"></script>
+<script src="../../../assets/js/gtag.js?v=48"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://digitalzyra.com/#organization", "name": "ZYRA", "alternateName": "ZYRA Digital", "url": "https://digitalzyra.com/", "logo": {"@type": "ImageObject", "url": "https://digitalzyra.com/assets/img/icon-512.png", "width": 512, "height": 512}, "image": "https://digitalzyra.com/assets/img/og-zyra.jpg", "email": "zyradigitalpersonal@gmail.com", "telephone": "+34643412454", "areaServed": [{"@type": "Country", "name": "España"}, "Worldwide"], "knowsLanguage": ["es", "en", "ar"], "founder": [{"@type": "Person", "name": "Kilian Abraham Barreto Mendoza"}, {"@type": "Person", "name": "Ahmednah Mohamed Saleh"}, {"@type": "Person", "name": "Iker Alonso Armas"}], "contactPoint": [{"@type": "ContactPoint", "contactType": "customer service", "email": "zyradigitalpersonal@gmail.com", "telephone": "+34643412454", "availableLanguage": ["Spanish", "English", "Arabic"], "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}}], "sameAs": ["https://www.instagram.com/zyra_personal?stkn=cDV1cXg5bzhrcXl6&utm_source=qr", "https://www.tiktok.com/@digitalzyra?_r=1&_t=ZN-99xErccwQJ4", "https://www.linkedin.com/in/digital-zyra-730293439"]}, {"@type": "WebSite", "@id": "https://digitalzyra.com/#website", "url": "https://digitalzyra.com/", "name": "ZYRA", "publisher": {"@id": "https://digitalzyra.com/#organization"}, "inLanguage": ["es-ES", "en", "ar"]}, {"@type": "BreadcrumbList", "@id": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://digitalzyra.com/es-es/"}, {"@type": "ListItem", "position": 2, "name": "Guías", "item": "https://digitalzyra.com/es-es/guias/"}, {"@type": "ListItem", "position": 3, "name": "Tutorial: formulario con Make", "item": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/"}]}, {"@type": "WebPage", "@id": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/#webpage", "url": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/", "name": "Tutorial Make: formulario web a Google Sheets y aviso | ZYRA", "description": "Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Incluye el código para enviarlo desde el servidor.", "inLanguage": "es-ES", "isPartOf": {"@id": "https://digitalzyra.com/#website"}, "about": {"@id": "https://digitalzyra.com/#organization"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://digitalzyra.com/assets/img/og-zyra.jpg"}, "datePublished": "2026-10-21", "dateModified": "2026-10-21", "breadcrumb": {"@id": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/#breadcrumb"}}, {"@type": "Article", "@id": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/#article", "headline": "Tutorial: del formulario de tu web a Google Sheets y un aviso al equipo, con Make", "description": "Paso a paso para enviar cada formulario de tu web a Google Sheets con Make, avisar al equipo y gestionar errores. Incluye el código para enviarlo desde el servidor.", "inLanguage": "es-ES", "datePublished": "2026-10-21", "dateModified": "2026-10-21", "wordCount": 866, "author": {"@id": "https://digitalzyra.com/#organization"}, "publisher": {"@id": "https://digitalzyra.com/#organization"}, "mainEntityOfPage": {"@id": "https://digitalzyra.com/es-es/guias/tutorial-formulario-make-google-sheets/#webpage"}, "articleSection": "Automatización", "image": "https://digitalzyra.com/assets/img/og-zyra.jpg"}]}</script>
+</head>
+<body data-lang="es" data-page="guide">
+<noscript><link href="../../../assets/css/nojs.css?v=48" rel="stylesheet"/></noscript>
+
+<canvas aria-hidden="true" class="spark" id="spark"></canvas>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav" id="nav">
+<a aria-label="ZYRA" class="nav__brand" href="../../../es-es/">
+<img alt="" decoding="async" height="32" src="../../../assets/img/zyra-simbolo-128.webp" width="34"/><span>ZYRA</span>
+</a>
+<div class="nav__actions">
+<button aria-label="Cambiar tema" class="icon-btn icon-btn--theme" id="themeBtn" title="Cambiar tema" type="button"><svg aria-hidden="true" class="ic ic--sun" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4.4"></circle><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"></path></svg><svg aria-hidden="true" class="ic ic--moon" viewbox="0 0 24 24"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"></path></svg></button>
+<div class="lang" id="lang">
+<button aria-expanded="false" aria-haspopup="true" aria-label="ES · Cambiar idioma" class="icon-btn icon-btn--lang" id="langBtn" type="button">
+<span id="langLabel">ES</span><i aria-hidden="true" class="lang__chev"></i>
+</button>
+<div class="lang__drop" hidden="" id="langDrop"><a aria-current="true" class="is-on" data-lang-to="es" href="../../../es-es/guias/tutorial-formulario-make-google-sheets/" hreflang="es-ES" lang="es-ES" title="Español">ES<span class="lang__name">Español</span></a><a data-lang-to="en" href="../../../en-en/" hreflang="en" lang="en" title="English">EN<span class="lang__name">English</span></a><a data-lang-to="ar" href="../../../ar-ar/" hreflang="ar" lang="ar" title="العربية">AR<span class="lang__name">العربية</span></a></div>
+</div>
+<button aria-controls="menu" aria-expanded="false" aria-label="Menú" class="burger" id="burger" title="Menú" type="button">
+<span aria-hidden="true" class="burger__lines"><i></i><i></i><i></i></span>
+</button>
+</div>
+</header>
+<div class="menu" hidden="" id="menu">
+<div aria-hidden="true" class="menu__bg"></div>
+<div class="menu__inner">
+<nav aria-label="Menú completo" class="menu__nav">
+<a class="menu__item" href="../../../es-es/"><span class="mlabel">Inicio</span></a>
+<div class="menu__group">
+<button aria-controls="svcDrop" aria-expanded="false" class="menu__item menu__toggle" id="svcToggle" type="button">
+<span class="mlabel">Servicios</span>
+<i aria-hidden="true" class="menu__chev"></i>
+</button>
+<div class="menu__drop" hidden="" id="svcDrop">
+<a href="../../../es-es/servicios/desarrollo-web/">Desarrollo web</a><a href="../../../es-es/servicios/software-a-medida/">Software a medida</a><a href="../../../es-es/servicios/automatizacion/">Automatización</a><a href="../../../es-es/servicios/agentes-de-ia/">Agentes de IA</a>
+<a class="menu__all" href="../../../es-es/servicios/">Ver todos los servicios</a>
+</div>
+</div><a class="menu__item" data-nav="proyectos" href="../../../es-es/proyectos/"><span class="mlabel">Proyectos</span></a><a class="menu__item" data-nav="guias" href="../../../es-es/guias/"><span class="mlabel">Guías</span></a>
+<a class="menu__item" href="../../../es-es/como-trabajamos/"><span class="mlabel">Cómo trabajamos</span></a>
+<a class="menu__item" href="../../../es-es/sobre-nosotros/"><span class="mlabel">Sobre nosotros</span></a>
+<a class="menu__item" href="../../../es-es/contacto/"><span class="mlabel">Contacto</span></a>
+</nav>
+<div class="menu__side">
+<figure class="menu__media" data-menu-media="">
+<img alt="" decoding="async" height="730" loading="lazy" src="../../../assets/img/zyra-banner.webp" width="1400"/>
+</figure>
+<div class="menu__meta">
+<p class="menu__claim">Tecnología sin humo.<br/><em>Soluciones que funcionan.</em></p>
+<ul class="menu__contact">
+<li><a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a></li>
+<li><a href="https://wa.me/34643412454">WhatsApp directo</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<main id="main"><div aria-hidden="true" class="readbar"><i></i></div>
+<section class="phero phero--article">
+<div aria-hidden="true" class="phero__glow"></div>
+<nav aria-label="Ruta" class="crumb"><a href="../../../es-es/">Inicio</a><i aria-hidden="true">/</i><a href="../../../es-es/guias/">Guías</a><i aria-hidden="true">/</i><span>Tutorial: formulario con Make</span></nav>
+<p class="article__cat">Automatización</p>
+<h1 class="article__title">Tutorial: del formulario de tu web a Google Sheets <em>y un aviso al equipo, con Make</em></h1>
+<p class="article__meta"><span>Por el <a href="../../../es-es/sobre-nosotros/">equipo de ZYRA</a></span><span>Publicada el <time datetime="2026-10-21">21 de octubre de 2026</time></span><span>8 min de lectura</span></p>
+</section>
+<div class="article wrap">
+<aside class="toc"><details class="toc__box" open=""><summary>En esta guía</summary><ol><li><a href="#esquema">El esquema</a></li><li><a href="#hoja">Paso 1: prepara la hoja</a></li><li><a href="#webhook">Paso 2: crea el webhook en Make</a></li><li><a href="#enviar">Paso 3: envía el formulario a Make desde el servidor</a></li><li><a href="#sheets">Paso 4: añade la fila en Google Sheets</a></li><li><a href="#aviso">Paso 5: avisa al equipo</a></li><li><a href="#errores">Paso 6: prepara el escenario para los fallos</a></li><li><a href="#probar">Paso 7: prueba como lo haría un cliente</a></li><li><a href="#datos">Protección de datos</a></li><li><a href="#fuentes">Fuentes</a></li></ol></details></aside>
+<div class="doc">
+<p class="prose__intro">Es la primera automatización que montamos en casi cualquier negocio: cada vez que alguien rellena el formulario de contacto, la solicitud se guarda en una hoja de cálculo ordenada y alguien del equipo recibe un aviso. Se monta en una tarde y evita el problema más común de los formularios: mensajes que llegan a un buzón que nadie mira. Usaremos <a href="https://www.make.com" rel="noopener" target="_blank">Make</a> y <a href="https://workspace.google.com/products/sheets/" rel="noopener" target="_blank">Google Sheets</a>, pero la idea es la misma en Zapier o n8n.</p>
+<div class="note"><strong>Antes de empezar.</strong> Necesitas una cuenta de Make a nombre del negocio, una cuenta de Google con acceso a la hoja y poder modificar el formulario de tu web (o pedírselo a quien la mantenga). Los nombres de los botones pueden cambiar ligeramente con las actualizaciones de Make; la <a href="https://help.make.com/" rel="noopener" target="_blank">ayuda oficial</a> siempre tiene la versión vigente.</div>
+<h2 id="esquema">El esquema</h2>
+<ol>
+<li>La web envía los datos del formulario a una dirección de Make (un <strong>webhook</strong>).</li>
+<li>Make añade una fila en Google Sheets con esos datos y la fecha.</li>
+<li>Make envía un aviso al equipo (email, Slack o similar).</li>
+<li>Si algo falla, Make guarda la ejecución para reintentarla y avisa.</li>
+</ol>
+<h2 id="hoja">Paso 1: prepara la hoja</h2>
+<p>Crea una hoja en Google Sheets con una primera fila de encabezados. Por ejemplo: <code>Fecha</code>, <code>Nombre</code>, <code>Email</code>, <code>Teléfono</code>, <code>Servicio</code>, <code>Mensaje</code>, <code>Estado</code>. La columna <em>Estado</em> la rellenará el equipo a mano (“pendiente”, “respondido”, “presupuesto enviado”) y convierte la hoja en una lista de seguimiento muy simple.</p>
+<p>Comparte la hoja solo con quien la necesita: contiene datos personales.</p>
+<h2 id="webhook">Paso 2: crea el webhook en Make</h2>
+<ol>
+<li>Crea un escenario nuevo y añade como primer módulo <strong>Webhooks → Custom webhook</strong>.</li>
+<li>Pulsa <em>Add</em>, ponle un nombre reconocible (“Formulario web”) y copia la dirección que genera Make. Trátala como una contraseña: quien la tenga puede enviarte datos.</li>
+<li>Deja el módulo esperando datos (Make lo indica con “determine data structure”) y envía un formulario de prueba desde tu web. Make detectará los campos automáticamente.</li>
+</ol>
+<h2 id="enviar">Paso 3: envía el formulario a Make desde el servidor</h2>
+<p>Se puede apuntar el formulario HTML directamente a la dirección del webhook, pero no lo recomendamos: la dirección queda visible en el código de la página y cualquiera podría usarla para llenar tu hoja de spam. Es mejor que tu servidor reciba el formulario, haga sus comprobaciones (campos obligatorios, protección contra bots) y después lo reenvíe. En una web con PHP, el reenvío cabe en pocas líneas:</p>
+<pre><code>&lt;?php
+// Después de validar el formulario...
+$datos = [
+  'nombre'   =&gt; $nombre,
+  'email'    =&gt; $email,
+  'telefono' =&gt; $telefono,
+  'servicio' =&gt; $servicio,
+  'mensaje'  =&gt; $mensaje,
+  'fecha'    =&gt; date('c'),
+];
+$ch = curl_init(MAKE_WEBHOOK_URL);          // guárdala fuera del código público
+curl_setopt_array($ch, [
+  CURLOPT_POST           =&gt; true,
+  CURLOPT_HTTPHEADER     =&gt; ['Content-Type: application/json'],
+  CURLOPT_POSTFIELDS     =&gt; json_encode($datos),
+  CURLOPT_RETURNTRANSFER =&gt; true,
+  CURLOPT_TIMEOUT        =&gt; 10,
+]);
+$ok = curl_exec($ch) !== false &amp;&amp; curl_getinfo($ch, CURLINFO_HTTP_CODE) &lt; 300;
+curl_close($ch);
+// Si $ok es false, guarda la solicitud en el servidor o envíate un email:
+// el formulario nunca debe perderse porque Make no responda.</code></pre>
+<p>Lo importante está en el último comentario: el formulario debe seguir funcionando aunque Make esté caído. Por eso el envío a Make es un paso más, no el único lugar donde se guarda la solicitud.</p>
+<h2 id="sheets">Paso 4: añade la fila en Google Sheets</h2>
+<ol>
+<li>Añade el módulo <strong>Google Sheets → Add a row</strong> y conecta la cuenta de Google del negocio.</li>
+<li>Elige la hoja y la pestaña. Make mostrará las columnas según los encabezados que creaste.</li>
+<li>Asigna a cada columna el campo correspondiente del webhook (arrastrando los valores del primer módulo). Deja <em>Estado</em> con el texto fijo “pendiente”.</li>
+</ol>
+<h2 id="aviso">Paso 5: avisa al equipo</h2>
+<p>Añade un tercer módulo para el aviso. Las opciones más habituales son <strong>Email → Send an email</strong>, <strong>Gmail → Send an email</strong> o <strong>Slack → Create a message</strong>. Un buen aviso es corto y permite actuar sin abrir la hoja:</p>
+<pre><code>Nueva solicitud de {{nombre}} ({{servicio}})
+Teléfono: {{telefono}} · Email: {{email}}
+"{{mensaje}}"</code></pre>
+<p>Si atendéis por WhatsApp, también se puede enviar el aviso por WhatsApp, pero requiere la API oficial; lo explicamos en la guía sobre <a href="../../../es-es/guias/whatsapp-business-api-chatbot/">WhatsApp Business y chatbots</a>.</p>
+<h2 id="errores">Paso 6: prepara el escenario para los fallos</h2>
+<p>Todo flujo falla alguna vez: Google pide volver a conectar la cuenta, alguien cambia el nombre de una columna o llega un dato raro. Tres ajustes evitan perder solicitudes:</p>
+<ul>
+<li>En la configuración del escenario, activa la opción de <strong>guardar las ejecuciones incompletas</strong>. Si un paso falla, la ejecución queda guardada para revisarla y reintentarla.</li>
+<li>Configura las <strong>notificaciones de error</strong> de Make para que lleguen a un email que alguien lea.</li>
+<li>No cambies los encabezados de la hoja sin revisar después el módulo de Google Sheets.</li>
+</ul>
+<h2 id="probar">Paso 7: prueba como lo haría un cliente</h2>
+<ol>
+<li>Envía un formulario normal y comprueba la fila y el aviso.</li>
+<li>Envía uno con tildes, eñes y un mensaje largo con saltos de línea.</li>
+<li>Envía uno dejando vacíos los campos opcionales.</li>
+<li>Desconecta temporalmente el escenario y envía otro: tu web debe seguir respondiendo bien y guardar la solicitud por su lado.</li>
+</ol>
+<p>Cuando todo funcione, activa el escenario con la programación “inmediatamente” para que procese cada formulario en cuanto llega.</p>
+<h2 id="datos">Protección de datos</h2>
+<p>Con este flujo, los datos del formulario pasan por Make y se guardan en Google. Ambas empresas actúan como encargadas del tratamiento: menciónalas en tu política de privacidad y no guardes en la hoja más datos de los necesarios. Lo explicamos en <a href="../../../es-es/guias/requisitos-legales-web/">Qué tiene que llevar por ley la web de un negocio</a>.</p>
+
+<h2 id="fuentes">Fuentes</h2>
+<ul class="sources">
+<li><a href="https://help.make.com/webhooks" rel="noopener" target="_blank">Make: documentación de webhooks</a>.</li><li><a href="https://www.help.make.com/en/help/errors/retry" rel="noopener" target="_blank">Make: reintentos y ejecuciones incompletas</a>.</li><li><a href="https://www.php.net/manual/es/book.curl.php" rel="noopener" target="_blank">PHP: extensión cURL</a>.</li>
+</ul>
+<aside class="doc__foot">
+<p><strong>Sobre esta guía.</strong> La escribe y revisa el equipo de ZYRA a partir de nuestro trabajo y de las fuentes oficiales enlazadas. Los nombres de las herramientas y de sus funciones pueden cambiar con sus actualizaciones: si ves un error o algo desactualizado, escríbenos a <a href="mailto:zyradigitalpersonal@gmail.com">zyradigitalpersonal@gmail.com</a> y lo corregimos. <a href="../../../es-es/guias/#como-escribimos">Cómo escribimos las guías</a>.</p>
+<p>¿Prefieres que lo hagamos nosotros? <a class="alink" href="../../../es-es/servicios/automatizacion/">Ver el servicio de automatización</a></p>
+</aside>
+</div>
+</div>
+<section class="related wrap">
+<h2 class="h-section">Sigue <em>leyendo.</em></h2>
+<ul class="glist glist--three"><li class="gcard rv"><a class="gcard__link" href="../../../es-es/guias/make-zapier-n8n-cual-elegir/"><span class="gcard__cat">Automatización</span><h3 class="gcard__title">Make, Zapier o n8n: cómo elegir herramienta para automatizar</h3><p class="gcard__desc">Comparamos Make, Zapier y n8n con criterios claros: facilidad, lógica, coste por uso, dónde se guardan los datos y mantenimiento. Con un caso resuelto en las tres.</p><span class="gcard__meta">7 min de lectura</span><span aria-hidden="true" class="gcard__go"><svg viewbox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></span></a></li><li class="gcard rv"><a class="gcard__link" href="../../../es-es/guias/que-automatizar-en-un-negocio/"><span class="gcard__cat">Automatización</span><h3 class="gcard__title">Qué tareas de tu negocio merece la pena automatizar</h3><p class="gcard__desc">Cómo elegir qué tareas automatizar, ejemplos reales por sector y una calculadora para saber cuántas horas recuperas y cuándo se amortiza.</p><span class="gcard__meta">4 min de lectura<span class="gcard__tool">Incluye herramienta</span></span><span aria-hidden="true" class="gcard__go"><svg viewbox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></span></a></li><li class="gcard rv"><a class="gcard__link" href="../../../es-es/guias/checklist-web-negocio-local/"><span class="gcard__cat">Web</span><h3 class="gcard__title">La web de un negocio local: 25 comprobaciones antes de publicarla</h3><p class="gcard__desc">25 comprobaciones para la web de una peluquería, clínica o restaurante: contacto, confianza, velocidad en móvil, Google y legal. Con lista interactiva.</p><span class="gcard__meta">5 min de lectura<span class="gcard__tool">Incluye herramienta</span></span><span aria-hidden="true" class="gcard__go"><svg viewbox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"></path></svg></span></a></li></ul>
+</section>
+<section class="band">
+<div aria-hidden="true" class="band__glow"></div>
+<h2 class="h-display">¿Lo vemos<br/><em>con tu caso?</em></h2>
+<p>Si después de leer esto quieres que lo revisemos en tu negocio, cuéntanoslo y te decimos por dónde empezaríamos.</p>
+<div class="band__cta"><a class="btn btn--light" data-magnet="" href="../../../es-es/contacto/">Cuéntanos tu proyecto</a></div>
+</section></main><a aria-label="Escríbenos por WhatsApp" class="wa-fab" href="https://wa.me/34643412454" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M16 3.2A12.7 12.7 0 0 0 5.1 22.4L3.3 28.8l6.6-1.7A12.7 12.7 0 1 0 16 3.2Zm0 23.2a10.5 10.5 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.5 10.5 0 1 1 16 26.4Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.6 8.6 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.5 6.5 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.7 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c-.1-.1-.3-.2-.6-.4Z" fill="currentColor"></path></svg><span class="wa-fab__tip">Escríbenos por WhatsApp</span></a><footer class="footer">
+<div class="footer__grid">
+<div class="footer__brand">
+<a aria-label="ZYRA" class="footer__mark" href="../../../es-es/">
+<img alt="" decoding="async" height="34" src="../../../assets/img/zyra-simbolo-128.webp" width="36"/><span>ZYRA</span>
+</a>
+<p>Diseñamos webs, desarrollamos software y creamos soluciones de automatización e IA para empresas que quieren crecer.</p>
+</div>
+<nav aria-label="Enlaces" class="footer__links"><a href="../../../es-es/servicios/desarrollo-web/">Desarrollo web</a><a href="../../../es-es/servicios/software-a-medida/">Software a medida</a><a href="../../../es-es/servicios/automatizacion/">Automatización</a><a href="../../../es-es/servicios/agentes-de-ia/">Agentes de IA</a><a href="../../../es-es/servicios/">Servicios</a><a data-nav="proyectos" href="../../../es-es/proyectos/">Proyectos</a><a data-nav="guias" href="../../../es-es/guias/">Guías</a><a href="../../../es-es/como-trabajamos/">Cómo trabajamos</a><a href="../../../es-es/sobre-nosotros/">Sobre nosotros</a><a href="../../../es-es/contacto/">Contacto</a></nav>
+<div class="footer__social">
+<p class="footer__label">Redes sociales</p>
+<div class="socials"><a aria-label="Instagram" href="https://www.instagram.com/zyra_personal?stkn=cDV1cXg5bzhrcXl6&amp;utm_source=qr" rel="noopener me" target="_blank" title="Instagram"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="17.6" rx="5" width="17.6" x="3.2" y="3.2"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.2" cy="6.8" fill="currentColor" r="1.1" stroke="none"></circle></svg></a><a aria-label="TikTok" href="https://www.tiktok.com/@digitalzyra?_r=1&amp;_t=ZN-99xErccwQJ4" rel="noopener me" target="_blank" title="TikTok"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M14.4 3.5v10.9a3.6 3.6 0 1 1-3.1-3.57"></path><path d="M14.4 3.5c.5 2.4 2 3.9 4.5 4.2"></path></svg></a><a aria-label="LinkedIn" href="https://www.linkedin.com/in/digital-zyra-730293439" rel="noopener me" target="_blank" title="LinkedIn"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="17.6" rx="3" width="17.6" x="3.2" y="3.2"></rect><path d="M7.6 10.4v6.2M7.6 7.4v.1M11.4 16.6v-6.2M11.4 13c0-1.6 1-2.7 2.4-2.7s2.2 1 2.2 2.6v3.7"></path></svg></a></div>
+</div>
+</div>
+<div class="footer__base"><span>© 2026 ZYRA</span><span class="footer__nap">Proyecto independiente · Equipo en remoto</span><span class="footer__legal"><a href="../../../es-es/legal/aviso-legal/">Aviso legal</a><a href="../../../es-es/legal/privacidad/">Privacidad</a><a href="../../../es-es/legal/cookies/">Cookies</a></span></div>
+<div aria-hidden="true" class="zy-wm"><span data-l="Z" style="--i:0">Z</span><span data-l="Y" style="--i:1">Y</span><span data-l="R" style="--i:2">R</span><span data-l="A" style="--i:3">A</span></div>
+</footer>
+<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script defer="" src="../../../assets/js/lang.js?v=48"></script><script defer="" src="../../../assets/js/cookies.js?v=48"></script>
+<script defer="" src="../../../assets/js/zyra.js?v=48"></script>
+<script defer="" src="../../../assets/js/zyra-fx.js?v=48"></script>
+<script defer="" src="../../../assets/js/resenas.js?v=48"></script>
+</body>
+</html>
