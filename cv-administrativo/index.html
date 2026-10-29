@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV Ahmednah Mohamed Saleh</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #141414; --muted: #555; --soft: #777;
+    --accent: #5b45f0; --accent-soft: #eeebfe;
+    --line: #e3e3e3; --side: #f4f3f1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body { font-family: "Inter Tight", sans-serif; color: var(--ink); font-size: 11.6px; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; display: flex; flex-direction: column; }
+  .mono { font-family: "IBM Plex Mono", monospace; }
+
+  header { position: relative; padding: 30px 40px 22px 48px; border-bottom: 1px solid var(--line); }
+  .kicker { display: flex; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: 10.5px; letter-spacing: .32em; color: var(--accent); font-weight: 500; }
+  .kicker i { width: 13px; height: 13px; border-radius: 3px; background: var(--accent); display: inline-block; }
+  h1 { font-size: 40px; line-height: 1.02; letter-spacing: -.035em; font-weight: 700; margin-top: 12px; }
+  h1 em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; color: var(--accent); letter-spacing: -.01em; font-size: 42px; }
+  .tagline { font-size: 14.5px; margin-top: 12px; color: #333; }
+  .tagline b { font-weight: 600; color: var(--ink); }
+  .contact { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: 6px 14px; margin-top: 14px; font-size: 10.8px; color: #333; max-width: 560px; }
+  .contact span { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+  .contact svg { width: 11px; height: 11px; stroke: var(--accent); fill: none; stroke-width: 2; flex: none; }
+  .photo { position: absolute; right: 44px; top: 50px; width: 132px; height: 132px; border-radius: 16px; background: var(--accent); overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .body { flex: 1; display: grid; grid-template-columns: 1fr 230px; }
+  main { padding: 20px 30px 20px 48px; }
+  aside { background: var(--side); padding: 20px 30px 20px 26px; border-left: 1px solid var(--line); }
+
+  h2 { display: flex; align-items: center; gap: 14px; font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: 10px; letter-spacing: .34em; color: var(--accent); margin: 0 0 9px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  section + section { margin-top: 20px; }
+
+  .profile p { font-size: 12.2px; line-height: 1.55; color: #222; }
+  .profile p + p { margin-top: 6px; }
+  b, strong { font-weight: 600; }
+
+  .jobs { position: relative; padding-left: 20px; }
+  .jobs::before { content: ""; position: absolute; left: 3px; top: 8px; bottom: 30px; width: 1px; background: var(--line); }
+  .job { position: relative; }
+  .job + .job { margin-top: 17px; }
+  .job::before { content: ""; position: absolute; left: -20px; top: 5px; width: 7px; height: 7px; border-radius: 50%; background: var(--ink); }
+  .job.current::before { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .job h3 { font-size: 14.5px; font-weight: 600; letter-spacing: -.01em; }
+  .date { font-family: "IBM Plex Mono", monospace; font-size: 10.5px; color: var(--soft); white-space: nowrap; }
+  .org { font-size: 11.6px; color: var(--soft); margin-top: 1px; }
+  .org a, .org .co { color: var(--accent); text-decoration: none; }
+  .job p.desc { margin-top: 5px; color: #222; }
+  ul.tasks { list-style: none; margin-top: 5px; }
+  ul.tasks li { position: relative; padding-left: 17px; color: #222; }
+  ul.tasks li + li { margin-top: 3px; }
+  ul.tasks li::before { content: "–"; position: absolute; left: 0; color: var(--soft); }
+
+  .card { border: 1px solid #d9d4fc; background: #faf9ff; border-radius: 10px; padding: 12px 14px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; }
+  .comp h4 { font-size: 12.4px; font-weight: 600; display: flex; align-items: center; gap: 7px; }
+  .comp h4 i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .comp p { font-size: 11px; color: #444; margin-top: 2px; line-height: 1.45; }
+
+  aside h3 { font-size: 12.2px; font-weight: 600; margin: 10px 0 5px; }
+  aside h2 + h3 { margin-top: 0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .pill { font-size: 10.4px; border: 1px solid #cfcfcf; border-radius: 999px; padding: 2px 9px; background: #fff; line-height: 1.45; }
+  .pill.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .edu + .edu { margin-top: 8px; }
+  .edu h4 { font-size: 12.2px; font-weight: 600; line-height: 1.3; }
+  .edu p { font-size: 11px; color: var(--muted); line-height: 1.4; }
+  .edu .date { font-size: 10px; }
+  .edu .note { color: var(--accent); }
+
+  .lang + .lang { margin-top: 8px; }
+  .lang .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .lang b { font-size: 12px; }
+  .lang .lvl { font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--soft); }
+  .bars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 4px; }
+  .bars i { height: 5px; border-radius: 3px; background: #dedde3; }
+  .bars i.on { background: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="kicker"><i></i>AUXILIAR ADMINISTRATIVO</div>
+    <h1>Ahmednah<br>Mohamed <em>Saleh</em></h1>
+    <p class="tagline">Gestión administrativa · Ofimática avanzada · <b>Organización y atención al cliente</b></p>
+    <div class="contact">
+      <span><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>ahmednahdesarrollador@gmail.com</span>
+      <span><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>+34 675 16 20 57</span>
+      <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Lleida · Disponibilidad inmediata</span>
+      <span><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>in/ahmednah-mohamed-saleh</span>
+      <span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Jornada completa o parcial</span>
+      <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Español · Árabe · Catalán · Inglés</span>
+    </div>
+    <div class="photo"><img src="photo_s.png" alt="Ahmednah Mohamed Saleh"></div>
+  </header>
+
+  <div class="body">
+    <main>
+      <section class="profile">
+        <h2>PERFIL</h2>
+        <p>Profesional <b>administrativo</b> con experiencia en <b>gestión documental, elaboración de presupuestos y atención al cliente</b>. Domino las <b>herramientas de ofimática</b> (Word, Excel, PowerPoint, Outlook y Google Workspace) y me manejo con soltura en entornos digitales gracias a mi formación en informática.</p>
+        <p>Persona <b>organizada, metódica y resolutiva</b>: planifico mis tareas por prioridades, cumplo plazos y mantengo la información ordenada y actualizada. Trato cercano y profesional con clientes y proveedores, presencial y por teléfono. <b>Disponibilidad inmediata</b> en Lleida.</p>
+      </section>
+
+      <section>
+        <h2>EXPERIENCIA</h2>
+        <div class="jobs">
+          <div class="job current">
+            <div class="job-head"><h3>Auxiliar Administrativo</h3><span class="date">6 meses</span></div>
+            <div class="org"><span class="co">[Nombre de la empresa]</span> · [Ciudad]</div>
+            <ul class="tasks">
+              <li>Registro, clasificación y archivo de documentación física y digital.</li>
+              <li>Introducción y actualización de datos en hojas de cálculo y bases de datos.</li>
+              <li>Atención telefónica y presencial, gestión del correo electrónico y de la agenda.</li>
+              <li>Apoyo en la preparación de facturas, albaranes y pedidos a proveedores.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-head"><h3>Auxiliar Administrativo y Técnico</h3><span class="date">2021 — 2022 · 1 año</span></div>
+            <div class="org"><span class="co">Asociación AISA</span> · Santa Cruz de Tenerife</div>
+            <ul class="tasks">
+              <li>Elaboración de <b>presupuestos</b> y seguimiento de costes con Excel.</li>
+              <li>Control de <b>inventario</b> de equipos y material, y registro de entradas y salidas.</li>
+              <li>Redacción de documentos e informes, y archivo de expedientes.</li>
+              <li>Atención a usuarios y coordinación de incidencias con el equipo.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-head"><h3>Atención al Cliente y Soporte Técnico</h3><span class="date">2023 — 2024</span></div>
+            <div class="org"><span class="co">Binary Systems</span> · Santa Cruz de Tenerife</div>
+            <ul class="tasks">
+              <li>Atención al cliente presencial y telefónica, y gestión de incidencias.</li>
+              <li>Registro de reparaciones, órdenes de trabajo y seguimiento de cada caso.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>COMPETENCIAS</h2>
+        <div class="card grid2">
+          <div class="comp"><h4><i></i>Organización</h4><p>Planificación por prioridades, gestión del tiempo y cumplimiento de plazos.</p></div>
+          <div class="comp"><h4><i></i>Gestión documental</h4><p>Archivo ordenado, control de versiones y documentación siempre localizable.</p></div>
+          <div class="comp"><h4><i></i>Atención al cliente</h4><p>Comunicación clara y amable por teléfono, correo y en persona.</p></div>
+          <div class="comp"><h4><i></i>Precisión</h4><p>Atención al detalle en la introducción de datos, cifras y presupuestos.</p></div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>OFIMÁTICA</h2>
+        <h3>Microsoft Office</h3>
+        <div class="pills"><span class="pill on">Excel</span><span class="pill on">Word</span><span class="pill">PowerPoint</span><span class="pill">Outlook</span><span class="pill">Access</span><span class="pill">Excel: fórmulas, tablas y gráficos</span></div>
+        <h3>Google Workspace</h3>
+        <div class="pills"><span class="pill">Docs</span><span class="pill">Sheets</span><span class="pill">Drive</span><span class="pill">Gmail</span><span class="pill">Calendar</span></div>
+        <h3>Gestión administrativa</h3>
+        <div class="pills"><span class="pill">Archivo</span><span class="pill">Facturación</span><span class="pill">Inventario</span><span class="pill">Agenda</span><span class="pill">Grabación de datos</span><span class="pill">Atención telefónica</span><span class="pill">Mecanografía</span></div>
+        </section>
+
+      <section>
+        <h2>FORMACIÓN</h2>
+        <div class="edu">
+          <h4>FP Grado Superior · Desarrollo de Aplicaciones Web (DAW)</h4>
+          <p>Centro de Estudios CCC · <span class="date">2024 — 2026</span></p>
+        </div>
+        <div class="edu">
+          <h4>FP Grado Medio · Sistemas Microinformáticos y Redes</h4>
+          <p>CIFP César Manrique, Tenerife · <span class="date">2022 — 2024</span></p>
+        </div>
+        <div class="edu">
+          <h4>FP Básica · Informática y Comunicaciones</h4>
+          <p>IES San Benito, La Laguna · <span class="date">2020 — 2022</span></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>IDIOMAS</h2>
+        <div class="lang"><div class="row"><b>Español</b><span class="lvl">Nativo</span></div><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+        <div class="lang"><div class="row"><b>Árabe</b><span class="lvl">Nativo</span></div><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></div>
+        <div class="lang"><div class="row"><b>Catalán</b><span class="lvl">Intermedio</span></div><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+        <div class="lang"><div class="row"><b>Inglés</b><span class="lvl">Intermedio · B1</span></div><div class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
